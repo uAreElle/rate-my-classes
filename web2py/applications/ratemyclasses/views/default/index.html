@@ -1,3 +1,7 @@
+<!--Cloned from:
+https://codepen.io/huange/pen/rbqsD
+-->
+
 {{extend 'layout.html'}}
 
 {{block head}}
@@ -5,7 +9,18 @@
 
 <div class="main_content">
 
-  <!-- Here goes your main HTML code. -->
+    <!-- Here goes your main HTML code. -->
+    <h1>Find classes at your school.</h1>
+    <div class="wrap">
+        <div class="search">
+            <form action="{{=URL('default', 'school_search')}}">
+                <input type="text" class="searchTerm" placeholder="Type in a school..." name="schoolsearch">
+                <button type="submit" class="searchButton">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
 
 </div>
 
