@@ -12,8 +12,9 @@ https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <link rel="stylesheet" href="{{=URL('static', 'font-awesome-4.6.3/css/font-awesome.min.css')}}">
-        <link href="{{=URL('static','css/rate-my-class.css')}}" rel="stylesheet" type="text/css"/>
+        <link href="{{=URL('static','css/stupid.css')}}" rel="stylesheet" type="text/css"/>
         <link href="{{=URL('static','css/web2py.css')}}" rel="stylesheet" type="text/css"/>
+        <link href="{{=URL('static','css/rate-my-class.css')}}" rel="stylesheet" type="text/css"/>
         {{include "web2py_ajax.html"}}
     </head>
 
@@ -26,49 +27,55 @@ https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
 
         <!-- Header of website -->
         <div class="topnav">
+
             <div class="home-logo">
-                <a class="active" href="{{=URL('default', 'index')}}">Rate My Class!</a>
+                <a class="active" href="{{=URL('default', 'index')}}"><b>Rate My Class!</b></a>
             </div>
-            <div class="search-and-login">
+
+            <div class="dropdown">
+                {{if auth.user is None:}}
+                    <button class="dropbtn">Login
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="{{=URL('default', 'user/login')}}">Login</a>
+                        <a href="{{=URL('default', 'user/register')}}">Sign Up</a>
+                        <a href="{{=URL('default', 'user/request_reset_password')}}">Forgot Password?</a>
+                    </div>
+                {{else:}}
+                    <button class="dropbtn">Welcome, {{=auth.user.first_name}}!
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="{{=URL('default', 'user/profile')}}">Profile</a>
+                        <a href="{{=URL('default', 'user/change_password')}}">Password</a>
+                        <a href="{{=URL('default', 'user/logout')}}">Logout</a>
+                    </div>
+                {{pass}}
+            </div>
+
+            <div class="classSearch">
                 <div class="search-container">
                     <form action="{{=URL('default', 'class_search')}}">
-                        <input type="text" placeholder="Search for a class..." name="search">
-                        <button type="submit"><i class="fa fa-search"></i></button>
+                        <input type="text" class="classSearchTerm" placeholder="Search for a class..." name="search">
+                        <button type="submit" class="classSearchButton">
+                            <i class="fa fa-search"></i>
+                        </button>
                     </form>
                 </div>
-                <div class="dropdown">
-                    {{if auth.user is None:}}
-                        <button class="dropbtn">Login
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="{{=URL('default', 'user/login')}}">Login</a>
-                            <a href="{{=URL('default', 'user/register')}}">Sign Up</a>
-                            <a href="{{=URL('default', 'user/request_reset_password')}}">Forgot Password?</a>
-                        </div>
-                    {{else:}}
-                        <button class="dropbtn">Welcome, {{=auth.user.first_name}}!
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="{{=URL('default', 'user/profile')}}">Profile</a>
-                            <a href="{{=URL('default', 'user/change_password')}}">Password</a>
-                            <a href="{{=URL('default', 'user/logout')}}">Logout</a>
-                        </div>
-                    {{pass}}
-                </div>
             </div>
+
         </div>
 
         <!-- Body of website -->
-        <main class="white">
+        <main>
             {{include}}
         </main>
 
         <!-- Footer of website -->
         <footer class="botnav">
             <div class="my-copyright">
-                <h4>Copyright @ 2018 Zoe Tacderas, Saiya Youn, Michelle Nguyen, Hiep Nguyen</h4>
+                <h6>Copyright @ 2018 Zoe Tacderas, Saiya Youn, Michelle Nguyen, Hiep Nguyen</h6>
             </div>
         </footer>
     </body>
