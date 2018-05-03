@@ -66,11 +66,7 @@ service = Service()
 plugins = PluginManager()
 
 # create all tables needed by auth if not custom tables
-auth.settings.extra_fields[auth.settings.table_user_name] = [
-     Field('school')   # add extra field to user signup
-]
 auth.define_tables(username=False, signature=False)
-
 
 # configure email
 mail = auth.settings.mailer
