@@ -66,5 +66,6 @@ def class_search():
 
 
 def school_search():
-    return dict(search_var=request.vars.schoolsearch)
+    x=request.args
+    return dict(search_var=x)
 
