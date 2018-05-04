@@ -10,6 +10,7 @@ https://codepen.io/huange/pen/rbqsD
 <div class="main_content">
 
     <!-- Here goes your main HTML code. -->
+    {{if (auth.user is None):}}
     <h1>Find classes at your school.</h1>
     <div class="wrap">
         <div class="search">
@@ -22,5 +23,18 @@ https://codepen.io/huange/pen/rbqsD
         </div>
     </div>
 
+    {{else:}}
+    <h1>Find classes at your school.</h1>
+    <div class="wrap">
+        <div class="search">
+            <form action="{{=URL('default', 'school_search')}}">
+                <input type="text" class="searchTerm" placeholder="Type in a school..." name="schoolsearch">
+                <button type="submit" class="searchButton">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+    {{pass}}
 </div>
 
