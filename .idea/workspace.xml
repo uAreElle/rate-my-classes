@@ -2,166 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d19403d-282b-45a0-aa3b-502202655c40" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/admin/sessions/072/199/127.0.0.1-0bf37364-555b-4afe-bb35-a6044a95087a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/admin/sessions/1e1/1c0/127.0.0.1-f1dee325-6431-4c5a-85e7-d7229f96bba7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/ABOUT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/controllers/api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/controllers/appadmin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/controllers/default.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/cron/crontab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/cron/crontab.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_cas.table" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_event.table" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_group.table" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_membership.table" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_permission.table" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_user.table" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/databases/c8b669d15150d7109e5f7ab36744a5b7_checklist.table" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/databases/c8b669d15150d7109e5f7ab36744a5b7_web2py_session_hw2.table" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/databases/c8b669d15150d7109e5f7ab36744a5b7_web2py_session_start.table" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/databases/sql.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/databases/storage.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/ar.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/ca.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/cs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/de.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/default.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/es.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/fr-ca.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/fr.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/hi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/hu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/id.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/it.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/my-mm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/my.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/nl.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/pl.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/plural-cs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/plural-en.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/plural-es.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/plural-ru.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/plural-uk.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/pt-br.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/pt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/ro.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/ru.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/sk.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/tr.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/uk.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/zh-cn.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/zh-tw.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/languages/zh.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/models/db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/models/menu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/models/tables.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/modules/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/private/appconfig.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/progress.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/routes.example.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/403.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/500.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/config.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/css/calendar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/css/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/css/myapp.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/css/stupid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/css/web2py.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/HELP-US-OUT.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/less/animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/less/bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/less/core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/less/fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/less/font-awesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/less/icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/less/larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/less/list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/less/path.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/less/rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/less/screen-reader.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/less/stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/scss/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/font-awesome-4.6.3/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/images/background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/images/facebook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/images/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/images/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/images/gplus-32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/images/twitter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/js/calendar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/js/default_index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/js/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/js/main-vue.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/js/marked.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/js/share.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/js/vue.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/js/vue.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/js/web2py.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/sass/_constants.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/sass/_main.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/static/sass/myapp.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/views/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/views/appadmin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/views/default/add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/views/default/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/views/default/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/views/default/user.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/views/generic.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/views/generic.ics" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/views/generic.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/views/generic.jsonp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/views/generic.load" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/views/generic.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/views/generic.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/views/generic.rss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/views/generic.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/views/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/applications/hw2/views/web2py_ajax.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web2py/httpserver.pid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web2py/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/ratemyclasses/controllers/default.py" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/ratemyclasses/controllers/default.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/ratemyclasses/models/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/ratemyclasses/models/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web2py/applications/ratemyclasses/models/tables.py" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/ratemyclasses/models/tables.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/ratemyclasses/static/css/rate-my-class.css" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/ratemyclasses/static/css/rate-my-class.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/ratemyclasses/views/default/class_search.html" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/ratemyclasses/views/default/class_search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/ratemyclasses/views/default/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/ratemyclasses/views/default/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/ratemyclasses/views/default/school_search.html" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/ratemyclasses/views/default/school_search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/ratemyclasses/views/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/ratemyclasses/views/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web2py/httpserver.log" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/httpserver.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web2py/parameters_8000.py" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/parameters_8000.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web2py/parameters_8080.py" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/parameters_8080.py" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +18,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web2py/applications/ratemyclasses/views/default/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="459">
               <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
             </state>
           </provider>
@@ -188,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="default.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web2py/applications/ratemyclasses/controllers/default.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+            <state relative-caret-position="255">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -206,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tables.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tables.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web2py/applications/ratemyclasses/models/tables.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+            <state relative-caret-position="107">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -220,6 +65,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/web2py/applications/ratemyclasses/models/tables.py" />
+      </list>
+    </option>
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
@@ -228,6 +80,12 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="462" />
+    <option name="y" value="189" />
+    <option name="width" value="1083" />
+    <option name="height" value="711" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -296,6 +154,10 @@
       <pane id="Scope" />
     </panes>
   </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -309,6 +171,25 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration name="rate-my-classes" type="PythonConfigurationType" factoryName="Python" singleton="true">
+      <module name="rate-my-classes" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web2py" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web2py/web2py.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Nosetests">
       <module name="rate-my-classes" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -373,7 +254,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d9216346-50aa-41bc-895f-49271d30e08c" name="Default" comment="" />
+      <changelist id="4d19403d-282b-45a0-aa3b-502202655c40" name="Default" comment="" />
       <created>1525208078788</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -388,17 +269,17 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24980484" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -408,7 +289,48 @@
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/web2py/applications/ratemyclasses/views/default/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2py/applications/ratemyclasses/views/default/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2py/applications/ratemyclasses/controllers/appadmin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10761">
+          <caret line="638" column="43" selection-start-line="638" selection-start-column="43" selection-end-line="638" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2py/applications/ratemyclasses/models/tables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2py/applications/ratemyclasses/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web2py/applications/ratemyclasses/views/default/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -453,22 +375,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web2py/applications/ratemyclasses/views/default/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="459">
           <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web2py/applications/ratemyclasses/models/tables.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web2py/applications/ratemyclasses/controllers/default.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web2py/applications/ratemyclasses/models/tables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>

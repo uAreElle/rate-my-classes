@@ -19,7 +19,6 @@ db.define_table('myclass',
                 Field('updated_on', 'datetime', update=datetime.datetime.utcnow())
 )
 
-<<<<<<< HEAD
 db.define_table('university',
                 Field('name'),          #Name of the university
                 Field('state_name'),    #State that the university is in
