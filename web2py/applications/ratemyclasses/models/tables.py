@@ -7,6 +7,13 @@
 # There is an implicit 'id integer autoincrement' field
 # Consult manual for more options, validators, etc.
 import datetime
+
+def get_user_email():
+    return auth.user.email if auth.user is not None else None
+
+def get_user_school():
+    return auth.user.school if auth.user is not None else None
+
 db.define_table('myclass',
                 Field('course_name'),   #Full course name ex. Web Applications
                 Field('department'),    #Can be full department name(i.e. Computer Science) or shorthand (i.e CMPS)
@@ -32,18 +39,18 @@ db.define_table('reviews',
                 Field('difficulty_rate'),
                 Field('rec_professor')
 )
-=======
-import datetime
->>>>>>> 54eac1e180fe1dc36c0375e1664ea4b03485e5be
 
-def get_user_email():
-    return auth.user.email if auth.user is not None else None
+#Dummy table testing
+db.define_table('school',
+                Field('name', default=get_user_school())
+                )
 
-'''
-db.define_table('user_profile',
-                Field('user_email', default=get_user_email()),
-                Field('school')
-               )
-'''
+# Pre-populate db with schools
+if db(db.school.id>0).count() == 0:
+    SCHOOLS = ['UC Santa Cruz', 'UC Berkeley', 'UC Merced']
+    for s in SCHOOLS:
+        db.school.insert(name = s)
+    db.commit()
+
 # after defining tables, uncomment below to enable auditing
 # auth.enable_record_versioning(db)
