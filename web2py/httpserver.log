@@ -418,3 +418,47 @@
 127.0.0.1, 2018-05-03 16:58:57, GET, /ratemyclasses/static/font-awesome-4.6.3/fonts/fontawesome-webfont.woff2, HTTP/1.1, 304, 0.000291
 127.0.0.1, 2018-05-03 16:58:58, GET, /favicon.ico, HTTP/1.1, 400, 0.000211
 >>>>>>> 54eac1e180fe1dc36c0375e1664ea4b03485e5be
+127.0.0.1, 2018-05-03 18:33:15, GET, /ratemyclasses/default/school_profile/UC Santa Cruz, HTTP/1.1, 404, 0.021651
+127.0.0.1, 2018-05-03 18:33:15, GET, /favicon.ico, HTTP/1.1, 400, 0.000210
+127.0.0.1, 2018-05-03 18:33:16, GET, /ratemyclasses/default/user/login, HTTP/1.1, 200, 0.026761
+127.0.0.1, 2018-05-03 18:33:17, GET, /favicon.ico, HTTP/1.1, 400, 0.000226
+127.0.0.1, 2018-05-03 18:33:17, GET, /ratemyclasses/default/user/login, HTTP/1.1, 200, 0.025814
+127.0.0.1, 2018-05-03 18:33:17, GET, /favicon.ico, HTTP/1.1, 400, 0.000234
+127.0.0.1, 2018-05-03 18:33:18, GET, /ratemyclasses/default/index, HTTP/1.1, 200, 0.021832
+127.0.0.1, 2018-05-03 18:33:18, GET, /favicon.ico, HTTP/1.1, 400, 0.000231
+127.0.0.1, 2018-05-03 18:33:18, GET, /ratemyclasses/default/index, HTTP/1.1, 200, 0.020075
+127.0.0.1, 2018-05-03 18:33:18, GET, /ratemyclasses/static/css/web2py.css, HTTP/1.1, 304, 0.000959
+127.0.0.1, 2018-05-03 18:33:18, GET, /ratemyclasses/static/font-awesome-4.6.3/css/font-awesome.min.css, HTTP/1.1, 304, 0.001788
+127.0.0.1, 2018-05-03 18:33:18, GET, /ratemyclasses/static/css/rate-my-class.css, HTTP/1.1, 304, 0.000868
+127.0.0.1, 2018-05-03 18:33:18, GET, /ratemyclasses/static/css/stupid.css, HTTP/1.1, 304, 0.000612
+127.0.0.1, 2018-05-03 18:33:18, GET, /ratemyclasses/static/js/calendar.js, HTTP/1.1, 304, 0.000362
+127.0.0.1, 2018-05-03 18:33:18, GET, /ratemyclasses/static/css/calendar.css, HTTP/1.1, 304, 0.001118
+127.0.0.1, 2018-05-03 18:33:18, GET, /ratemyclasses/static/js/jquery.js, HTTP/1.1, 304, 0.000459
+127.0.0.1, 2018-05-03 18:33:18, GET, /ratemyclasses/static/js/web2py.js, HTTP/1.1, 304, 0.000364
+127.0.0.1, 2018-05-03 18:33:19, GET, /ratemyclasses/static/font-awesome-4.6.3/fonts/fontawesome-webfont.woff2, HTTP/1.1, 304, 0.000337
+127.0.0.1, 2018-05-03 18:33:19, GET, /favicon.ico, HTTP/1.1, 400, 0.000218
+127.0.0.1, 2018-05-03 18:36:53, GET, /ratemyclasses/default/school_search, HTTP/1.1, 200, 0.020362
+127.0.0.1, 2018-05-03 18:36:53, GET, /ratemyclasses/static/font-awesome-4.6.3/css/font-awesome.min.css, HTTP/1.1, 304, 0.000495
+127.0.0.1, 2018-05-03 18:36:53, GET, /ratemyclasses/static/css/rate-my-class.css, HTTP/1.1, 304, 0.003336
+127.0.0.1, 2018-05-03 18:36:53, GET, /ratemyclasses/static/css/web2py.css, HTTP/1.1, 304, 0.002911
+127.0.0.1, 2018-05-03 18:36:53, GET, /ratemyclasses/static/css/stupid.css, HTTP/1.1, 304, 0.001539
+127.0.0.1, 2018-05-03 18:36:53, GET, /ratemyclasses/static/js/calendar.js, HTTP/1.1, 304, 0.001549
+127.0.0.1, 2018-05-03 18:36:53, GET, /ratemyclasses/static/css/calendar.css, HTTP/1.1, 304, 0.001346
+127.0.0.1, 2018-05-03 18:36:53, GET, /ratemyclasses/static/js/web2py.js, HTTP/1.1, 304, 0.000421
+127.0.0.1, 2018-05-03 18:36:53, GET, /ratemyclasses/static/js/jquery.js, HTTP/1.1, 304, 0.004383
+127.0.0.1, 2018-05-03 18:36:53, GET, /favicon.ico, HTTP/1.1, 400, 0.000201
+127.0.0.1, 2018-05-03 18:36:57, GET, /ratemyclasses/default/index, HTTP/1.1, 200, 0.019437
+127.0.0.1, 2018-05-03 18:36:57, GET, /favicon.ico, HTTP/1.1, 400, 0.000297
+127.0.0.1, 2018-05-03 18:36:59, GET, /ratemyclasses/default/index, HTTP/1.1, 200, 0.021732
+127.0.0.1, 2018-05-03 18:36:59, GET, /favicon.ico, HTTP/1.1, 400, 0.000232
+127.0.0.1, 2018-05-03 18:37:08, GET, /ratemyclasses/default/index, HTTP/1.1, 200, 0.019507
+127.0.0.1, 2018-05-03 18:37:08, GET, /ratemyclasses/static/font-awesome-4.6.3/fonts/fontawesome-webfont.woff2, HTTP/1.1, 304, 0.000369
+127.0.0.1, 2018-05-03 18:37:08, GET, /favicon.ico, HTTP/1.1, 400, 0.000278
+127.0.0.1, 2018-05-03 18:37:10, GET, /ratemyclasses/default/index, HTTP/1.1, 200, 0.024273
+127.0.0.1, 2018-05-03 18:37:10, GET, /favicon.ico, HTTP/1.1, 400, 0.000237
+127.0.0.1, 2018-05-03 18:37:15, GET, /ratemyclasses/default/user/login, HTTP/1.1, 200, 0.025645
+127.0.0.1, 2018-05-03 18:37:15, GET, /favicon.ico, HTTP/1.1, 400, 0.000214
+127.0.0.1, 2018-05-03 18:37:23, POST, /ratemyclasses/default/user/login, HTTP/1.1, 303, 0.025314
+127.0.0.1, 2018-05-03 18:37:23, GET, /ratemyclasses/default/index, HTTP/1.1, 303, 0.020847
+127.0.0.1, 2018-05-03 18:37:23, GET, /ratemyclasses/default/school_profile/UC Santa Cruz, HTTP/1.1, 200, 0.020698
+127.0.0.1, 2018-05-03 18:37:23, GET, /favicon.ico, HTTP/1.1, 400, 0.000202
