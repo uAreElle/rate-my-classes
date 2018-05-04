@@ -19,6 +19,7 @@ db.define_table('myclass',
                 Field('updated_on', 'datetime', update=datetime.datetime.utcnow())
 )
 
+<<<<<<< HEAD
 db.define_table('university',
                 Field('name'),          #Name of the university
                 Field('state_name'),    #State that the university is in
@@ -32,8 +33,18 @@ db.define_table('reviews',
                 Field('difficulty_rate'),
                 Field('rec_professor')
 )
+=======
+import datetime
+>>>>>>> 54eac1e180fe1dc36c0375e1664ea4b03485e5be
 
+def get_user_email():
+    return auth.user.email if auth.user is not None else None
 
-
+'''
+db.define_table('user_profile',
+                Field('user_email', default=get_user_email()),
+                Field('school')
+               )
+'''
 # after defining tables, uncomment below to enable auditing
 # auth.enable_record_versioning(db)

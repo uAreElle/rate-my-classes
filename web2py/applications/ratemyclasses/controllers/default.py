@@ -18,6 +18,8 @@ def index():
     return auth.wiki()
     """
     #response.flash = T("Hello World")
+    if auth.is_logged_in():
+        redirect(URL('school_search',args=[auth.user.school]))
     return dict(message=T('Welcome to web2py!'))
 
 def user():
@@ -63,5 +65,6 @@ def class_search():
 
 
 def school_search():
-    return dict(search_var=request.vars.schoolsearch)
+    x=request.args
+    return dict(search_var=x)
 

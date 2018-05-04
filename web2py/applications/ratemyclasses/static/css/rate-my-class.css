@@ -4,9 +4,13 @@ https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
 https://codepen.io/huange/pen/rbqsD
 */
 
-/* ================= layout.html ================================== */
-main {min-height: 70vh;} /* Copied from web2py.css */
-header, main, footer {display:block; with:100%} /* Copied from stupid.css */
+/* ================= Used in layout.html ================================== */
+
+/*
+Cloned from:
+https://www.w3schools.com/howto/howto_css_searchbar.asp
+https://codepen.io/huange/pen/rbqsD
+ */
 
 * {box-sizing: border-box;}
 
@@ -25,7 +29,6 @@ body {
 .topnav a {
     float: left;
     display: block;
-    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -42,17 +45,19 @@ body {
     color: white;
 }
 
-.topnav .search-and-login {
-    float: right;
+.topnav .classSearch {
+    float: left;
+    width: 50%;
+    position: relative;
 }
 
 .topnav .search-container {
     float: right;
+    width: 50%;
+    position: relative
 }
 
 .topnav input[type=text] {
-    padding: 6px;
-    margin-top: 8px;
     font-size: 17px;
     border: none;
     border-top-left-radius: 15px;
@@ -76,6 +81,26 @@ body {
     background: #ccc;
 }
 
+.classSearchTerm {
+    float: left;
+    height: 46px;
+    color: black;
+}
+
+.classSearchTerm:focus {
+    color: black;
+}
+
+.classSearchButton {
+    position: absolute;
+    top: -16%;
+    right: -36px;
+    width: 40px;
+    height: 46px;
+    text-align: center;
+    color: #fff;
+}
+
 @media screen and (max-width: 600px) {
     .topnav .search-container {
         float: none;
@@ -84,7 +109,6 @@ body {
         float: none;
         display: block;
         text-align: left;
-        width: 100%;
         margin: 0;
         padding: 14px;
     }
@@ -93,12 +117,16 @@ body {
     }
 }
 
-.topnav .search-and-login a.login {
+.topnav .classSearch a.login {
     color: white;
 }
 
+/*
+Cloned from: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
+ */
+
 .dropdown {
-    float: left;
+    float: right;
     overflow: hidden;
 }
 
@@ -153,51 +181,51 @@ body {
     border: 1px solid #49c1f4;
 }
 
-/* ================= index.html ================================== */
-.h1 {
-    text-align: center;
-}
+/* ================= Used in index.html ================================== */
+
+/*
+Cloned from: https://codepen.io/huange/pen/rbqsD
+ */
 
 .search {
-  width: 100%;
-  position: relative
+    width: 100%;
+    position: relative
 }
 
 .searchTerm {
     float: left;
-    width: 100%;
     height: 46px;
-    border: 3px solid #00B4CC;
-    padding: 5px;
-    border-radius: 5px;
-    outline: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     color: black;
     font-size: 20px;
 }
 
 .searchTerm:focus {
-  color: black;
+    color: black;
 }
 
 .searchButton {
-  position: absolute;
-  right: -36px;
-  width: 40px;
-  height: 46px;
-  border: 1px solid #00B4CC;
-  background: #00B4CC;
-  text-align: center;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 20px;
+    position: absolute;
+    right: -36px;
+    width: 40px;
+    height: 46px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 6px 10px;
 }
 
 /*Resize the wrap to see the search bar change!*/
 .wrap {
-  width: 30%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
