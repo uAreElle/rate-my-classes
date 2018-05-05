@@ -70,3 +70,23 @@ def school_search():
 
 def school_profile():
     return dict(school_prof_var=request.args)
+
+def class_profile():
+
+    return dict()
+
+def add_school():
+    form = SQLFORM(db.school)#FORM('', INPUT(_value=''), INPUT(_type='submit'))
+    if form.process().accepted:
+        response.flash = 'form accepted'
+    elif form.errors:
+        response.flash = 'form has errors'
+    return dict(form=form)
+
+def add_class():
+    form = SQLFORM(db.myclass)
+    if form.process().accepted:
+        response.flash = 'form accepted'
+    elif form.errors:
+        response.flash = 'form has errors'
+    return dict(form=form)

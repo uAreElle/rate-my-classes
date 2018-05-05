@@ -10,12 +10,8 @@ https://codepen.io/huange/pen/rbqsD
 <div class="main_content">
 
     <!-- Here goes your main HTML code. -->
-<<<<<<< HEAD
-    {{if (auth.user is None):}}
     <h1>Find classes at your school.</h1>
-=======
-    <h3>Find classes at your school.</h3>
->>>>>>> 54eac1e180fe1dc36c0375e1664ea4b03485e5be
+
     <div class="wrap">
         <div class="search">
             <form action="{{=URL('default', 'school_search')}}">
@@ -24,21 +20,12 @@ https://codepen.io/huange/pen/rbqsD
                     <i class="fa fa-search"></i>
                 </button>
             </form>
+            <div class="addschool">
+                <a href="{{=URL('default','add_school')}}">Don't see your school listed? Click here.</a>
+            </div>
         </div>
     </div>
 
-    {{else:}}
-    <h1>Find classes at your school.</h1>
-    <div class="wrap">
-        <div class="search">
-            <form action="{{=URL('default', 'school_search')}}">
-                <input type="text" class="searchTerm" placeholder="Type in a school..." name="schoolsearch">
-                <button type="submit" class="searchButton">
-                    <i class="fa fa-search"></i>
-                </button>
-            </form>
-        </div>
-    </div>
-    {{pass}}
+
 </div>
 

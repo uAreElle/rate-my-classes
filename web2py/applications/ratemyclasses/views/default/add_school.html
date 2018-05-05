@@ -1,0 +1,18 @@
+{{extend 'layout.html'}}
+
+{{block head}}
+{{end}}
+
+<div class="main_content">
+
+    <!-- Here goes your main HTML code. -->
+    <h3>Don't see your school? Add below.</h3>
+
+    {{=form}}
+
+    <h2>Submitted variables</h2>
+    {{=BEAUTIFY(request.vars)}}
+    <h2>Accepted variables</h2>
+    {{=BEAUTIFY(form.vars)}}
+
+</div>
