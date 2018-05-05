@@ -77,3 +77,5 @@ def school_profile():
     return dict(school_var=q)
 
 
+def school_profile():
+    return dict(school_prof_var=request.args)

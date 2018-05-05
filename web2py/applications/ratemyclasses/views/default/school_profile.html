@@ -8,8 +8,8 @@
     <!-- Here goes your main HTML code. -->
     <h3>SCHOOL PROFILE HTML</h3>
     {{if school_var is None:}}
-    <!-- Displays this message if the school in the user's
-    school field is not in the school database. -->
+        <!-- Displays this message if the school in the user's
+        school field is not in the school database. -->
         Error: School not in database.
     {{else:}}
         Displaying profile of: {{=school_var.name}}
