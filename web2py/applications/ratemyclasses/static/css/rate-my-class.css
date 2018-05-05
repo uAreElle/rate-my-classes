@@ -20,10 +20,35 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Copied from https://css-tricks.com/stripes-css/ */
+.module {
+    background: white;
+    border: 1px solid #ccc;
+    margin: 3%;
+    > h6 {
+        padding: 1rem;
+        margin: 0 0 0.5rem 0;
+    }
+}
+.stripe-2 {
+    color: black;
+    background: repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 10px,
+            #ccc 10px,
+            #ccc 20px
+    ),
+    linear-gradient(
+            to bottom,
+            #eee,
+            #999
+    )
+}
+
 .topnav {
     overflow: hidden;
-    background-color: #49c1f4;
-    border: 1px solid #49c1f4;
+    background-color: #3a3a3a;
 }
 
 .topnav a {
@@ -35,14 +60,15 @@ body {
     font-size: 17px;
 }
 
+/* Over-ridden by stupid.css */
 .topnav a:hover {
     background-color: #4bb7e6;
     color: black;
 }
 
 .topnav a.active {
-    background-color: #4bb7e6;
-    color: white;
+    background-color: #3a3a3a;
+    color: #49c1f4;
 }
 
 .topnav .classSearch {
@@ -69,7 +95,7 @@ body {
     padding: 6px 10px;
     margin-top: 8px;
     margin-right: 16px;
-    background: #ddd;
+    background: #49c1f4;
     font-size: 17px;
     border: none;
     cursor: pointer;
@@ -78,7 +104,7 @@ body {
 }
 
 .topnav .search-container button:hover {
-    background: #ccc;
+    background: #4ecaff;
 }
 
 .classSearchTerm {
@@ -94,7 +120,6 @@ body {
 .classSearchButton {
     position: absolute;
     top: -16%;
-    right: -36px;
     width: 40px;
     height: 46px;
     text-align: center;
@@ -134,7 +159,7 @@ Cloned from: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
     font-size: 16px;
     border: none;
     outline: none;
-    color: white;
+    color: #49c1f4;
     min-width: 175px;
     padding: 14px 16px;
     background-color: inherit;
@@ -143,13 +168,13 @@ Cloned from: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
 }
 
 .dropdown:hover .dropbtn {
-    background-color: #ddd;
+    background-color: #3a3a3a;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #3a3a3a;
     min-width: 175px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -157,7 +182,7 @@ Cloned from: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
 
 .dropdown-content a {
     float: none;
-    color: black;
+    color: #49c1f4;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -165,7 +190,7 @@ Cloned from: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #3a3a3a;
 }
 
 .dropdown:hover .dropdown-content {
@@ -173,12 +198,13 @@ Cloned from: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
 }
 
 .botnav {
-    background-color: #49c1f4;
+    background-color: #3a3a3a;
 }
 
 .botnav .my-copyright {
     text-align: center;
-    border: 1px solid #49c1f4;
+    color: #49c1f4;
+    border: 1px solid #3a3a3a;
 }
 
 /* ================= Used in index.html ================================== */
@@ -207,10 +233,8 @@ Cloned from: https://codepen.io/huange/pen/rbqsD
 
 .searchButton {
     position: absolute;
-    right: -36px;
     width: 40px;
     height: 46px;
-    border: 1px solid #00B4CC;
     background: #00B4CC;
     text-align: center;
     color: #fff;
