@@ -17,11 +17,11 @@ def index():
     if you need a simple wiki simply replace the two lines below with:
     return auth.wiki()
     """
-    #response.flash = T("Hello World")
     if auth.is_logged_in():
-        redirect(URL('default','school_profile',args=[auth.user.school]))
-    
+        if auth.user.school is not None:
+            redirect(URL('default', 'school_profile'))
     return dict(message=T('Welcome to web2py!'))
+
 
 def user():
     """
@@ -62,11 +62,20 @@ def call():
 
 
 def class_search():
+    # Value from class search bar is in request.vars.search
     return dict(search_var=request.vars.search)
 
 
 def school_search():
-    return dict(search_var=request.vars.search)
+    # Value from school search bar is in request.vars.schoolsearch
+    return dict(search_var=request.vars.schoolsearch)
+
+
+def school_profile():
+    # Displays the school profile based on the user's school.
+    q = db((db.school.name == auth.user.school)).select().first()
+    return dict(school_var=q)
+
 
 def school_profile():
     return dict(school_prof_var=request.args)
