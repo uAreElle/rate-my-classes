@@ -6,16 +6,11 @@
 <div class="main_content">
 
     <!-- Here goes your main HTML code. -->
-    <h3>SCHOOL PROFILE HTML</h3>
-    {{if school_var is None:}}
-        <!-- Displays this message if the school in the user's
-        school field is not in the school database. -->
-        Error: School not in database.
-    {{else:}}
-        Displaying profile of: {{=school_var.name}}
-    {{pass}}
+    <h3>SCHOOL PROFILE</h3>
+
+    <h3>Viewing: {{=school.name}}</h3>
+
 
     <a href="{{=URL('default', 'add_class')}}">Don't see your class? Click here to add.</a>
-
 
 </div>
