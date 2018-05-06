@@ -10,20 +10,22 @@ https://codepen.io/huange/pen/rbqsD
 <div class="main_content">
 
     <!-- Here goes your main HTML code. -->
+
     <h1>Find classes at your school.</h1>
 
-    <div class="wrap">
-        <div class="search">
-            <form action="{{=URL('default', 'school_search')}}">
-                <input type="text" class="searchTerm" placeholder="Type in a school..." name="schoolsearch">
-                <button type="submit" class="searchButton">
-                    <i class="fa fa-search"></i>
-                </button>
-            </form>
-            <div class="addschool">
-                <a href="{{=URL('default','add_school')}}">Don't see your school listed? Click here.</a>
-            </div>
+    <div class="schoolSearchBar">
+
+        <form class="schoolSearchForm" action="{{=URL('default', 'school_search')}}">
+            <input type="text" placeholder="Type in a school..." name="schoolsearch">
+            <button type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+
+        <div class="addschool">
+            <a class="addSchoolLink" href="{{=URL('default','add_school')}}">Don't see your school listed? Click here.</a>
         </div>
+
     </div>
 
 </div>

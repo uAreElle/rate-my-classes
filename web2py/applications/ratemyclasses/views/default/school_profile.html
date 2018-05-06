@@ -8,9 +8,10 @@
     <!-- Here goes your main HTML code. -->
     <h3>SCHOOL PROFILE</h3>
 
-    <h3>Viewing: {{=school.name}}</h3>
-
-
-    <a href="{{=URL('default', 'add_class')}}">Don't see your class? Click here to add.</a>
+    {{if school_var is not None:}}
+        <h3>Viewing: {{=school_var.name}}</h3>
+        <br/>
+        <a class="addClassLink" href="{{=URL('default', 'add_class')}}">Don't see your class? Click here to add.</a>
+    {{pass}}
 
 </div>
