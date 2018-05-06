@@ -1,5 +1,5 @@
 /* Cloned from:
-https://www.w3schools.com/howto/howto_css_searchbar.asp
+https://www.w3schools.com/howto/howto_css_search_button.asp
 https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
 https://codepen.io/huange/pen/rbqsD
 */
@@ -18,32 +18,6 @@ body {
     background: #ed9038;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Copied from https://css-tricks.com/stripes-css/ */
-.module {
-    background: white;
-    border: 1px solid #ccc;
-    margin: 3%;
-    > h6 {
-        padding: 1rem;
-        margin: 0 0 0.5rem 0;
-    }
-}
-.stripe-2 {
-    color: black;
-    background: repeating-linear-gradient(
-            45deg,
-            transparent,
-            transparent 10px,
-            #ccc 10px,
-            #ccc 20px
-    ),
-    linear-gradient(
-            to bottom,
-            #eee,
-            #999
-    )
 }
 
 .topnav {
@@ -71,79 +45,56 @@ body {
     color: #49c1f4;
 }
 
-.topnav .classSearch {
-    float: left;
-    width: 50%;
-    position: relative;
-}
-
-.topnav .search-container {
-    float: right;
-    width: 50%;
-    position: relative
-}
-
-.topnav input[type=text] {
-    font-size: 17px;
-    border: none;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-}
-
-.topnav .search-container button {
-    float: right;
-    padding: 6px 10px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background: #49c1f4;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
-
-.topnav .search-container button:hover {
-    background: #4ecaff;
-}
-
-.classSearchTerm {
-    float: left;
-    height: 46px;
-    color: black;
-}
-
-.classSearchTerm:focus {
-    color: black;
-}
-
-.classSearchButton {
-    position: absolute;
-    top: -16%;
-    width: 40px;
-    height: 46px;
-    text-align: center;
-    color: #fff;
-}
-
 @media screen and (max-width: 600px) {
-    .topnav .search-container {
-        float: none;
+    form.classSearchForm {
+        max-width: max-content;
     }
-    .topnav a, .topnav input[type=text], .topnav .search-container button {
-        float: none;
-        display: block;
-        text-align: left;
-        margin: 0;
-        padding: 14px;
+    form.classSearchForm input[type=text] {
+        max-width: 83%;
+        float: left;
     }
-    .topnav input[type=text] {
-        border: 1px solid #ccc;
+    form.classSearchForm button {
+        float: right;
+        position: relative;
+        width: 30px;
+        height: 40px;
     }
 }
 
-.topnav .classSearch a.login {
+.classSearchBar {
+    margin: auto;
+    max-width: 300px;
+}
+
+/* Copied from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_search_button */
+form.classSearchForm input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+form.classSearchForm button {
+    float: left;
+    padding: 10px;
+    background: #2196F3;
     color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.classSearchForm button:hover {
+    background: #0b7dda;
+}
+
+form.classSearchForm::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 /*
@@ -209,47 +160,65 @@ Cloned from: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
 
 /* ================= Used in index.html ================================== */
 
-/*
-Cloned from: https://codepen.io/huange/pen/rbqsD
- */
-
-.search {
-    width: 100%;
-    position: relative
+.schoolSearchBar {
+    margin: auto;
+    max-width: 350px;
 }
 
-.searchTerm {
+/* Copied from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_search_button */
+form.schoolSearchForm input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
     float: left;
-    height: 46px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    color: black;
-    font-size: 20px;
+    width: 80%;
+    background: #f1f1f1;
 }
 
-.searchTerm:focus {
-    color: black;
-}
-
-.searchButton {
-    position: absolute;
-    width: 40px;
-    height: 46px;
-    background: #00B4CC;
-    text-align: center;
-    color: #fff;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+form.schoolSearchForm button {
+    float: left;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
     cursor: pointer;
-    font-size: 20px;
-    padding: 6px 10px;
 }
 
-/*Resize the wrap to see the search bar change!*/
-.wrap {
-    width: 30%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+form.schoolSearchForm button:hover {
+    background: #0b7dda;
 }
+
+form.schoolSearchForm::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.addschool {
+    text-align: center;
+}
+
+.addSchoolLink {
+    font-weight: bold;
+    color:#49c1f4;
+}
+
+.addSchoolLink:hover {
+    background-color: #3a3a3a;
+    color: #49c1f4;
+}
+
+/* ================= Used in school_profile.html ================================== */
+
+.addClassLink {
+    font-weight: bold;
+    color:#49c1f4;
+}
+
+.addClassLink:hover {
+    background-color: #3a3a3a;
+    color: #49c1f4;
+}
+
