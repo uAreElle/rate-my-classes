@@ -41,6 +41,7 @@ db.define_table('university',
 )
 
 db.define_table('reviews',
+                Field('class_id', 'reference myclass'),
                 Field('overall_rate'),
                 Field('difficulty_rate'),
                 Field('rec_professor')
