@@ -12,6 +12,8 @@
         <h3>Viewing: {{=school_var.name}}</h3>
         <br/>
         <a class="addClassLink" href="{{=URL('default', 'add_class')}}">Don't see your class? Click here to add.</a>
+    {{else:}}
+        <h3> School not found </h3>
     {{pass}}
 
 </div>

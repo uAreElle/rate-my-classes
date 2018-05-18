@@ -72,8 +72,10 @@ def school_search():
 
 
 def school_profile():
-    # Displays the school profile based on the user's school.
-    q = db((db.school.name == auth.user.school)).select().first()
+    # Displays the school profile.
+    #q = db((db.school.name == auth.user.school)).select().first()
+    r = request.vars.schoolsearch                   # Retrieve search bar input
+    q = db((db.school.name == r)).select().first()  # Match search input to school in db
     return dict(school_var=q)
 
 def class_profile():
