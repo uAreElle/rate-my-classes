@@ -11,7 +11,7 @@
     {{if school_var is not None:}}
         <h3>Viewing: {{=school_var.name}}</h3>
         <br/>
-        <a class="addClassLink" href="{{=URL('default', 'add_class')}}">Don't see your class? Click here to add.</a>
+        <a class="addClassLink" href="{{=URL('add_class', vars=dict(schoolid=s))}}">Don't see your class? Click here to add.</a>
     {{else:}}
         <h3> School not found </h3>
     {{pass}}

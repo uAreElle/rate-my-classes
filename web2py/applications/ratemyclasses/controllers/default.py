@@ -76,7 +76,7 @@ def school_profile():
     #q = db((db.school.name == auth.user.school)).select().first()
     r = request.vars.schoolsearch                   # Retrieve search bar input
     q = db((db.school.name == r)).select().first()  # Match search input to school in db
-    return dict(school_var=q)
+    return dict(school_var=q, s=q.school_id)
 
 def class_profile():
     return dict()
@@ -90,9 +90,10 @@ def add_school():
     return dict(form=form)
 
 def add_class():
+    sid = request.vars.s
     form = SQLFORM(db.myclass)
     if form.process().accepted:
         response.flash = 'form accepted'
     elif form.errors:
         response.flash = 'form has errors'
-    return dict(form=form)
+    return dict(form=form, sid=sid)
