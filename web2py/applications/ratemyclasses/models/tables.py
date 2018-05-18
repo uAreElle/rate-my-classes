@@ -29,7 +29,8 @@ db.define_table('myclass',
                 Field('bookmark', 'boolean', default=False, readable=False, writable=False), #If the student wants to bookmark it it's true else false
                 #Field('professor_name'), not sure how we want professor to be(input by the student or pre-approved, etc.)
                 Field('updated_on', 'datetime', update=datetime.datetime.utcnow(), readable=False, writable=False),
-                Field('school_id', readable=True, writable=False)
+                Field('school_id', readable=True, writable=False),
+                Field('class_id', default=make_random_id(), readable=False, writable=False)
 )
 
 db.define_table('university',
@@ -41,10 +42,14 @@ db.define_table('university',
 )
 
 db.define_table('reviews',
-                Field('class_id', 'reference myclass'),
+                #Field('class_id', 'reference myclass'),
+                Field('class_id', readable=True, writable=False),
                 Field('overall_rate'),
                 Field('difficulty_rate'),
-                Field('rec_professor')
+                Field('rec_professor'),
+                Field('grade'),
+                Field('teacher'),
+                Field('main_review', 'text')
 )
 
 #Dummy table testing

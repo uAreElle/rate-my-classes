@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d19403d-282b-45a0-aa3b-502202655c40" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web2py/applications/ratemyclasses/models/tables.py" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/ratemyclasses/models/tables.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/ratemyclasses/static/css/rate-my-class.css" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/ratemyclasses/static/css/rate-my-class.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/ratemyclasses/views/default/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/ratemyclasses/views/default/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/ratemyclasses/views/default/school_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/ratemyclasses/views/default/school_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/ratemyclasses/views/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/applications/ratemyclasses/views/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web2py/httpserver.log" beforeDir="false" afterPath="$PROJECT_DIR$/web2py/httpserver.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,8 +34,8 @@
       <file leaf-file-name="tables.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web2py/applications/ratemyclasses/models/tables.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
+            <state relative-caret-position="289">
+              <caret line="51" column="44" lean-forward="true" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -76,7 +70,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="462" />
     <option name="y" value="189" />
     <option name="width" value="1083" />
@@ -655,8 +649,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web2py/applications/ratemyclasses/models/tables.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
+        <state relative-caret-position="289">
+          <caret line="51" column="44" lean-forward="true" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="44" />
         </state>
       </provider>
     </entry>
