@@ -5,15 +5,31 @@
 
 <div class="main_content">
 
-    <!-- Here goes your main HTML code. -->
-    <h3>SCHOOL PROFILE</h3>
+    <div class="schoolprof container">
 
-    {{if school_var is not None:}}
-        <h3>Viewing: {{=school_var.name}}</h3>
-        <br/>
-        <a class="addClassLink" href="{{=URL('add_class', vars=dict(schoolid=s))}}">Don't see your class? Click here to add.</a>
-    {{else:}}
-        <h3> School not found </h3>
-    {{pass}}
+        <!-- Here goes your main HTML code. -->
+
+        <h3>SCHOOL PROFILE</h3>
+
+        {{if school_var is not None:}}
+            <h3>Viewing: {{=school_var.name}}</h3>
+            <br/>
+            <a class="addClassLink" href="{{=URL('add_class', vars=dict(schoolid=s))}}">Don't see your class? Click here to add.</a>
+
+            <br/><br/>
+
+            <div class="twothirds schoolprof-column compressible">
+                <h4><u>Top Recommended Classes</u></h4>
+            </div>
+
+            <div class="third schoolprof-column compressible">
+                <h4><u>Search By Major</u></h4>
+            </div>
+
+        {{else:}}
+            <h3> School not found </h3>
+        {{pass}}
+
+    </div>
 
 </div>
