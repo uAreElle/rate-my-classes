@@ -38,18 +38,30 @@ https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
                         <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="dropdown-content">
-                        <a href="{{=URL('default', 'user/login')}}">Login</a>
-                        <a href="{{=URL('default', 'user/register')}}">Sign Up</a>
-                        <a href="{{=URL('default', 'user/request_reset_password')}}">Forgot Password?</a>
+                        <a href="{{=URL('default', 'user/login')}}">
+                            <i class="fa fa-sign-in" aria-hidden="true"></i>  Login
+                        </a>
+                        <a href="{{=URL('default', 'user/register')}}">
+                            <i class="fa fa-user-plus" aria-hidden="true"></i>  Sign Up
+                        </a>
+                        <a href="{{=URL('default', 'user/request_reset_password')}}">
+                            <i class="fa fa-unlock-alt" aria-hidden="true"></i>  Forgot Password?
+                        </a>
                     </div>
                 {{else:}}
                     <button class="dropbtn">Welcome, {{=auth.user.first_name}}!
                         <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="dropdown-content">
-                        <a href="{{=URL('default', 'user/profile')}}">Profile</a>
-                        <a href="{{=URL('default', 'user/change_password')}}">Password</a>
-                        <a href="{{=URL('default', 'user/logout')}}">Logout</a>
+                        <a href="{{=URL('default', 'user/profile')}}">
+                            <i class="fa fa-user" aria-hidden="true"></i>  Profile
+                        </a>
+                        <a href="{{=URL('default', 'user/change_password')}}">
+                            <i class="fa fa-key" aria-hidden="true"></i>  Password
+                        </a>
+                        <a href="{{=URL('default', 'user/logout')}}">
+                            <i class="fa fa-power-off" aria-hidden="true"></i>  Logout
+                        </a>
                     </div>
                 {{pass}}
             </div>
