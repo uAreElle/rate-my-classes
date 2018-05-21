@@ -19,7 +19,17 @@
             <br/><br/>
 
             <div class="twothirds schoolprof-column compressible">
+
                 <h4><u>Top Recommended Classes</u></h4>
+
+                {{for my_class in my_classes:}}
+
+                    <div class="my_class">
+                        <div class="class_title">{{=my_class.course_name}}</div>
+                    </div>
+
+                {{pass}}
+
             </div>
 
             <div class="third schoolprof-column compressible">
