@@ -78,7 +78,16 @@ def school_profile():
         q = db((db.school.name == r)).select().first()  # Match search input to school in db
     else:
         q = db((db.school.name == auth.user.school)).select().first()
-    return dict(school_var=q, s=q.school_id)
+
+
+    # Store all the classes associated with the school id
+    if q is not None:
+        c = db((db.myclass.school_id == q.school_id)).select()
+    else:
+        c = ""
+    print(c)
+
+    return dict(school_var=q, s=q.school_id, my_classes=c)
 
 def class_profile():
     return dict()
