@@ -221,4 +221,11 @@ form.schoolSearchForm::after {
     background-color: #3a3a3a;
     color: #49c1f4;
 }
+.addReviewLink {
+    font-weight: bold;
+    color: black;
+}
 
+.addReviewLink:hover {
+    color: #49c1f4;
+}
