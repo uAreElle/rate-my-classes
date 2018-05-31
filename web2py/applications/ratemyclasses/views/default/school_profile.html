@@ -11,10 +11,10 @@
 
         <h3>SCHOOL PROFILE</h3>
 
-        {{if school_var is not None:}}
-            <h3>Viewing: {{=school_var.name}}</h3>
+        {{if school_name is not None:}}
+            <h3>Viewing: {{=school_name}}</h3>
             <br/>
-            <a class="addClassLink" href="{{=URL('add_class', vars=dict(schoolid=s))}}">Don't see your class? Click here to add.</a>
+            <a class="addClassLink" href="{{=URL('add_class', vars=dict(schoolid=school_id, schoolname=school_name))}}">Don't see your class? Click here to add.</a>
 
             <br/><br/>
 
@@ -25,7 +25,7 @@
                 {{for my_class in my_classes:}}
 
                     <div class="my_class">
-                        <div class="class_title">{{=my_class.course_name}}</div>
+                        <a class="addReviewLink" href="{{=URL('add_review', vars=dict(classid=my_class.id, classname=my_class.course_name))}}">{{=my_class.course_name}}</a>
                     </div>
 
                 {{pass}}

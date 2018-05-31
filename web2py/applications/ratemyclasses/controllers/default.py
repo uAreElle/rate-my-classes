@@ -82,16 +82,19 @@ def school_profile():
 
     # Store all the classes associated with the school id
     if q is not None:
-        c = db((db.myclass.school_id == q.school_id)).select()
+        if db.myclass is not None:
+            c = db((db.myclass.school_id == q.school_id)).select()
+            return dict(school_name=q.name, school_id=q.school_id, my_classes=c)
+        else:
+            return dict(school_name=q.name, school_id=q.school_id, my_classes="")
     else:
-        c = ""
-    print(c)
+        return dict(school_name="", school_id=-1, my_classes="")
 
-    return dict(school_var=q, s=q.school_id, my_classes=c)
 
 def class_profile():
     return dict()
 
+@auth.requires_login()
 def add_school():
     form = SQLFORM(db.school)#FORM('', INPUT(_value=''), INPUT(_type='submit'))
     if form.process().accepted:
@@ -100,11 +103,22 @@ def add_school():
         response.flash = 'form has errors'
     return dict(form=form)
 
+@auth.requires_login()
 def add_class():
-    sid = request.vars.s
     form = SQLFORM(db.myclass)
+    form.vars.school_id = request.vars.schoolid
     if form.process().accepted:
         response.flash = 'form accepted'
     elif form.errors:
         response.flash = 'form has errors'
-    return dict(form=form, sid=sid)
+    return dict(form=form)
+
+@auth.requires_login()
+def add_review():
+    form = SQLFORM(db.reviews)
+    form.vars.class_id = request.vars.classid
+    if form.process().accepted:
+        response.flash = 'form accepted'
+    elif form.errors:
+        response.flash = 'form has errors'
+    return dict(form=form)
