@@ -15,6 +15,10 @@ def get_user_email():
 def get_user_school():
     return auth.user.school if auth.user is not None else None
 
+def get_user_firstname():
+    return auth.user.first_name if auth.user is not None else None
+
+
 def make_random_id():
     return randint(4,9000)
 
@@ -27,11 +31,12 @@ db.define_table('school',
 
 db.define_table('myclass',
                 Field('department'),    #Can be full department name(i.e. Computer Science) or shorthand (i.e CMPS)
-                Field('course_num'),    #Course number ex. 101
-                Field('course_name'),   #Full course name ex. Web Applications
-                Field('genEd'),         #General education requirement it satisfies
-                Field('info'),          #The course details go here(a brief synopsis)
-                Field('bookmark', 'boolean', default=False), #If the student wants to bookmark it it's true else false
+                Field('course_num', label='Course Number'),    #Course number ex. 101
+                Field('course_name', label='Course Name'),   #Full course name ex. Web Applications
+                Field('genEd', label='General Education Code'),         #General education requirement it satisfies
+                Field('info', label='Course Details'),          #The course details go here(a brief synopsis)
+                #Field('bookmark', 'boolean', default=False), #If the student wants to bookmark it it's true else false
+                # (will uncomment above if we get time to implement this)
                 Field('updated_on', 'datetime', update=datetime.datetime.utcnow(), readable=False, writable=False),
                 Field('school_id', readable=False, writable=False)
                 #Field('class_id', default=make_random_id(), readable=False, writable=False)
@@ -43,12 +48,15 @@ db.define_table('reviews',
                 #Field('class_id', 'reference myclass'),
                 #Field('class_id', readable=True, writable=False),
                 Field('class_id', 'reference myclass', readable=False, writable=False),
-                Field('overall_rate', 'float'),
-                Field('difficulty_rate', 'float'),
-                Field('rec_professor'),
-                Field('grade'),
+                Field('overall_rate', 'float', label='Overall Rating (1-5)'),
+                Field('difficulty_rate', 'float', label='Difficulty Rating (1-5)'),
+                #Field('rec_professor'),
+                Field('grade', label='Grade Earned'),
                 Field('teacher'),
-                Field('main_review', 'text')
+                Field('recommend', 'boolean', default=False, label='Would you recommend this class?'),
+                Field('main_review', 'text', label='Enter your review here.'),
+                Field('created_on', 'datetime', update=datetime.datetime.utcnow(), readable=False, writable=False),
+                Field('first_name', default=get_user_firstname(), readable=False, writable=False)
 )
 
 db.reviews.id.writable = db.reviews.id.readable = False
