@@ -221,6 +221,31 @@ form.schoolSearchForm::after {
     background-color: #3a3a3a;
     color: #49c1f4;
 }
+
+.classProfileLink {
+    font-weight: bold;
+    color: black;
+}
+
+.classProfileLink:hover {
+    color: #49c1f4;
+}
+
+/* ================= Used in class_profile.html ================================== */
+
+.classprof {
+    text-align: center;
+}
+
+h5#s_name {
+    color: #575554;
+}
+
+.grey-text {
+    text-align: center;
+    color: #575554;
+}
+
 .addReviewLink {
     font-weight: bold;
     color: black;

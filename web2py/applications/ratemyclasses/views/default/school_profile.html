@@ -5,7 +5,7 @@
 
 <div class="main_content">
 
-    <div class="schoolprof container">
+    <div class="schoolprof container compressible">
 
         <!-- Here goes your main HTML code. -->
 
@@ -14,7 +14,8 @@
         {{if school_name is not None:}}
             <h3>Viewing: {{=school_name}}</h3>
             <br/>
-            <a class="addClassLink" href="{{=URL('add_class', vars=dict(schoolid=school_id, schoolname=school_name))}}">Don't see your class? Click here to add.</a>
+            <a class="addClassLink" href="{{=URL('add_class', vars=dict(schoolid=school_id,
+            schoolname=school_name))}}">Don't see your class? Click here to add.</a>
 
             <br/><br/>
 
@@ -25,7 +26,8 @@
                 {{for my_class in my_classes:}}
 
                     <div class="my_class">
-                        <a class="addReviewLink" href="{{=URL('add_review', vars=dict(classid=my_class.id, classname=my_class.course_name))}}">{{=my_class.course_name}}</a>
+                        <a class="classProfileLink" href="{{=URL('class_profile', vars=dict(classid=my_class.id,
+                        schoolname=school_name))}}">{{=my_class.course_name}}</a>
                     </div>
 
                 {{pass}}

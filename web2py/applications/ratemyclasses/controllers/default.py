@@ -92,11 +92,50 @@ def school_profile():
 
 
 def class_profile():
-    return dict()
+    # Displays the class profile.
+
+    # Get query associated with class from myclass table
+    q = db((db.myclass.id == request.vars.classid)).select().first()
+
+    # Get all reviews associated with class
+    rows = db((db.reviews.class_id == request.vars.classid)).select()
+
+    reviews = ' '
+    overallrating = 0
+    recommendclass = 0.0
+    counter = 0
+
+    if rows is not None:
+        reviews = rows
+
+        for r in rows:
+            counter = counter + 1
+            if r.overall_rate is not None:
+                overallrating = overallrating + r.overall_rate
+            if r.recommend is True:
+                recommendclass = recommendclass + 1
+
+        if counter is not 0:
+            overallrating = overallrating / counter  # computes average rating
+            recommendclass = (recommendclass/counter)*100  # computes recommendclass percentage
+
+    return dict(
+        class_id=request.vars.classid,
+        school_name=request.vars.schoolname,
+        class_name=q.course_name,
+        department=q.department,
+        course_number=q.course_num,
+        general_ed=q.genEd,
+        class_info=q.info,
+        reviews=reviews,
+        overallrating=overallrating,
+        recommendclass=recommendclass
+    )
 
 @auth.requires_login()
 def add_school():
-    form = SQLFORM(db.school)#FORM('', INPUT(_value=''), INPUT(_type='submit'))
+    # Need to check if school has already been added to the database!
+    form = SQLFORM(db.school)
     if form.process().accepted:
         response.flash = 'form accepted'
     elif form.errors:
@@ -116,6 +155,8 @@ def add_class():
 @auth.requires_login()
 def add_review():
     form = SQLFORM(db.reviews)
+    # lowers size of mainreview textbox
+    form.element('textarea[name=main_review]')['_style'] = 'width:500px;height:150px;'
     form.vars.class_id = request.vars.classid
     if form.process().accepted:
         response.flash = 'form accepted'

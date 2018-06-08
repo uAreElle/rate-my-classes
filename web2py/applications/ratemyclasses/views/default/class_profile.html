@@ -5,8 +5,64 @@
 
 <div class="main_content">
 
-    <h3>Class Profile</h3>
+    <div class="classprof container compressible">
 
-    <h3>Course at: </h3>
+        <h3>
+            <u>{{=department}} {{=course_number}}: {{=class_name}}</u>
+        </h3>
+
+        <h5 id="s_name">
+            {{=school_name}}
+        </h5>
+
+        <br/>
+
+        <h6>
+            Satisfies general education: <p class="grey-text">{{=general_ed}}</p>
+            General information about this class:
+            <br/>
+            <p class="grey-text">{{=class_info}}</p>
+        </h6>
+
+        <br/>
+
+        <div class="overall_stats">
+            <b>
+                Overall Rating: {{=overallrating}}<br/>
+                {{=recommendclass}}% recommend this class<br/><br/>
+            </b>
+        </div>
+
+        <div class="my_review">
+            <a class="btn rounded" href="{{=URL('add_review', vars=dict(classid=class_id,
+            classname=class_name))}}"><i class="fa fa-plus"></i> Add a Review</a>
+        </div>
+
+        <br/>
+
+        {{for review in reviews:}}
+            <div class="review container">
+                <div class="reviewcol quarter container compressible">
+                    Rating: {{=review.overall_rate}}<br/>
+                    Difficulty: {{=review.difficulty_rate}}<br/>
+                    Professor: {{=review.teacher}}<br/>
+                    Grade: {{=review.grade}}<br/>
+
+                    {{if review.recommend is True:}}
+                        Would recommend: <i class="fa fa-check" aria-hidden="true"></i><br/>
+                    {{else:}}
+                        Would recommend: <i class="fa fa-times" aria-hidden="true"></i><br/>
+                    {{pass}}
+                </div>
+                <div class="reviewcol threequarters container compressible">
+                    {{=review.created_on.day}}/{{=review.created_on.month}}/{{=review.created_on.year}}<br/>
+                    {{=review.main_review}}<br/>
+                    --- {{=review.first_name}}
+                </div>
+            </div>
+            <br/><br/>
+        {{pass}}
+
+    </div>
 
 </div>
