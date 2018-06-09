@@ -11,18 +11,25 @@
     <a class ="schoolProfileLink">{{=school_name}}</a>  <!-- Need to link to school profile, above doesn't work-->
 
     <h3>Viewing: All courses</h3>
-    <a href="{{=URL('default','add_class')}}">Don't see a class? click here</a>
+    <a class="btn blue pull-right" href="{{=URL('default','add_class')}}">Don't see a class? click here</a>
     <div class="class table">
-            <table class="fill" id="class directory">
-                                    <tr>
-                                        <th>Course number</th>
-                                        <th>Course name</th>
-                                        <th>Rating</th>
-                                    </tr>
-                                    <!-- Add classes
-                                    -->
-                               </table>
-                            {{pass}}
-                        </div>
+        <table class="fill" id="class directory">
+            <tr>
+                <th>Course number</th>
+                <th>Course name</th>
+                <th>Rating</th>
+            </tr>
+            <!-- List all classes -->
+            {{if my_classes is not None:}}
+                {{for my_class in my_classes:}}
+                    <tr>
+                        <th>{{=my_class.course_num}}</th>
+                        <th>{{=my_class.course_name}}</th>
+                        <!-- Add rating -->
+                    </tr>
+                {{pass}}
+            {{pass}}
+        </table>
+    </div>
 
 </div>
