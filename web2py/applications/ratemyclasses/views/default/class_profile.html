@@ -18,10 +18,9 @@
         <br/>
 
         <h6>
-            Satisfies general education: <p class="grey-text">{{=general_ed}}</p>
-            General information about this class:
-            <br/>
-            <p class="grey-text">{{=class_info}}</p>
+            Satisfies general education: <div class="grey-text">{{=general_ed}}</div><br/>
+            General information about this class:<br/>
+            <div class="grey-text">{{=class_info}}</div>
         </h6>
 
         <br/>
@@ -40,28 +39,42 @@
 
         <br/>
 
-        {{for review in reviews:}}
-            <div class="review container">
-                <div class="reviewcol quarter container compressible">
-                    Rating: {{=review.overall_rate}}<br/>
-                    Difficulty: {{=review.difficulty_rate}}<br/>
-                    Professor: {{=review.teacher}}<br/>
-                    Grade: {{=review.grade}}<br/>
+        <table id="reviews-table">
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
+            {{for review in reviews:}}
+                <tr>
+                    <td>
+                        <div class="reviewcol compressible">
 
-                    {{if review.recommend is True:}}
-                        Would recommend: <i class="fa fa-check" aria-hidden="true"></i><br/>
-                    {{else:}}
-                        Would recommend: <i class="fa fa-times" aria-hidden="true"></i><br/>
-                    {{pass}}
-                </div>
-                <div class="reviewcol threequarters container compressible">
-                    {{=review.created_on.day}}/{{=review.created_on.month}}/{{=review.created_on.year}}<br/>
-                    {{=review.main_review}}<br/>
-                    --- {{=review.first_name}}
-                </div>
-            </div>
-            <br/><br/>
-        {{pass}}
+                            Rating: {{=review.overall_rate}}<br/>
+                            Difficulty: {{=review.difficulty_rate}}<br/>
+
+                        {{if review.teacher!='None' and review.teacher!='':}}
+                            Professor: {{=review.teacher}}<br/>
+                        {{pass}}
+
+                            Grade: {{=review.grade}}<br/>
+
+                        {{if review.recommend is True:}}
+                            Would recommend: <i class="fa fa-check" aria-hidden="true"></i><br/>
+                        {{else:}}
+                            Would recommend: <i class="fa fa-times" aria-hidden="true"></i><br/>
+                        {{pass}}
+                        </div>
+                    </td>
+                    <td>
+                        <div class="reviewcol compressible">
+                        {{=review.created_on.month}}/{{=review.created_on.day}}/{{=review.created_on.year}}<br/>
+                        {{=review.main_review}}<br/>
+                            --- {{=review.first_name}}
+                        </div>
+                    </td>
+                </tr>
+            {{pass}}
+        </table>
 
     </div>
 
