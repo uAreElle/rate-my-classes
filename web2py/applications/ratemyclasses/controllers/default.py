@@ -119,6 +119,9 @@ def class_profile():
             overallrating = overallrating / counter  # computes average rating
             recommendclass = (recommendclass/counter)*100  # computes recommendclass percentage
 
+        overallrating = round(overallrating, 1)
+        recommendclass = round(recommendclass, 1)
+
     return dict(
         class_id=request.vars.classid,
         school_name=request.vars.schoolname,
@@ -134,7 +137,6 @@ def class_profile():
 
 @auth.requires_login()
 def add_school():
-    # Need to check if school has already been added to the database!
     form = SQLFORM(db.school)
     if form.process().accepted:
         response.flash = 'form accepted'

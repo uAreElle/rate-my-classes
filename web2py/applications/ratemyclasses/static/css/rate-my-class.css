@@ -235,6 +235,10 @@ form.schoolSearchForm::after {
 
 .classprof {
     text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 90px;
+    margin-right: 90px;
 }
 
 h5#s_name {
@@ -242,7 +246,6 @@ h5#s_name {
 }
 
 .grey-text {
-    text-align: center;
     color: #575554;
 }
 
