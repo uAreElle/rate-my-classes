@@ -42,8 +42,8 @@ db.define_table('myclass',
                 #Field('bookmark', 'boolean', default=False), #If the student wants to bookmark it it's true else false
                 # (will uncomment above if we get time to implement this)
                 Field('updated_on', 'datetime', update=datetime.datetime.utcnow(), readable=False, writable=False),
-                Field('school_id', readable=False, writable=False)
-                #Field('class_id', default=make_random_id(), readable=False, writable=False)
+                Field('school_id', readable=False, writable=False),
+                Field('class_id', default=make_random_id(), readable=False, writable=False),
 )
 
 db.myclass.id.writable = db.myclass.id.readable = False
@@ -51,7 +51,7 @@ db.myclass.id.writable = db.myclass.id.readable = False
 db.myclass.department.requires = IS_NOT_EMPTY()
 db.myclass.course_num.requires = IS_NOT_EMPTY()
 db.myclass.course_name.requires = IS_NOT_EMPTY()
-db.myclass.info.requires = IS_NOT_EMPTY()
+# db.myclass.info.requires = IS_NOT_EMPTY()
 
 db.define_table('reviews',
                 #Field('class_id', 'reference myclass'),
@@ -91,11 +91,11 @@ if db(db.school.id>0).count() == 0:
         db.school.insert(name = s, school_id=i)
     db.commit()
 # Add test classes
-if db(db.myclass.id>0).count() == 0:
-    CLASSES = ['UCSC 101', 'UCB 102', 'UCM 103']
-    for i,c in enumerate(CLASSES):
-        db.myclass.insert(course_name = c, school_id=i)
-    db.commit()  # classes stored in myclass table
+# if db(db.myclass.id>0).count() == 0:
+#     CLASSES = ['UCSC 101', 'UCB 102', 'UCM 103']
+#     for i,c in enumerate(CLASSES):
+#         db.myclass.insert(course_num = c, school_id=i)
+#     db.commit()  # classes stored in myclass table
 
 
 

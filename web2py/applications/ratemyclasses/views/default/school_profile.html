@@ -13,6 +13,7 @@
 
         {{if school_name is not None:}}
             <h3>Viewing: {{=school_name}}</h3>
+            <a class="btn blue" href="{{=URL('class_directory', vars=dict(schoolname=school_name))}}">View all</a>
             <br/>
             <a class="addClassLink" href="{{=URL('add_class', vars=dict(schoolid=school_id,
             schoolname=school_name))}}">Don't see your class? Click here to add.</a>
@@ -21,21 +22,36 @@
 
             <div class="twothirds schoolprof-column compressible">
 
-                <h4><u>Top Recommended Classes</u></h4>
-                <button class="btn blue" href="{{=URL('class_directory', vars=dict(schoolname=school_name))}}">View all</button>
+                <h4><u>Top Rated Courses</u></h4>
+                
                 {{for my_class in my_classes:}}
 
-                    <div class="my_class">
-                        <a class="classProfileLink" href="{{=URL('class_profile', vars=dict(classid=my_class.id,
-                        schoolname=school_name))}}">{{=my_class.course_name}}</a>
-                    </div>
+                <div class="my_class">
+                  
+                    <tr>
+                        <td>
+                            <a class="classProfileLink" href="{{=URL('class_profile', vars=dict(classid=my_class.id,
+                            schoolname=school_name))}}">{{=my_class.course_num}}</a>
+                        </td>
+                        <td> 
+                            {{=my_class.course_name}}
+                        </td>
+                    </tr>
+                   
+                   
+                </div>
 
                 {{pass}}
 
             </div>
 
-            <div class="third schoolprof-column compressible">
-                <h4><u>Search By Major</u></h4>
+            <div class="third schoolprof-column classes compressible">
+                <div class="half compressible easy classes">
+
+                </div>
+                <div class="half compressible hard classes">
+
+                </div>
             </div>
 
         {{else:}}

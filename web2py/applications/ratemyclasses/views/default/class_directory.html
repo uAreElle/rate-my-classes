@@ -6,25 +6,23 @@
 <div class="main_content">
 
     <!-- Here goes your main HTML code. -->
-    <h3>CLASS DIRECTORY HTML</h3>
-    <a class ="schoolProfileLink" href="{{=URL('school_profile')}}">{{=schoolname}}</a>
+    <h3>CLASS DIRECTORY</h3>
+    <!--<a class ="schoolProfileLink" href="{{=URL('school_profile')}}">{{=school_name}}</a>-->
+    <a class ="schoolProfileLink">{{=school_name}}</a>  <!-- Need to link to school profile, above doesn't work-->
 
-    <h1>Viewing: All courses</h1>
+    <h3>Viewing: All courses</h3>
+    <a href="{{=URL('default','add_class')}}">Don't see a class? click here</a>
     <div class="class table">
-    {{for my_class in my_classes:}}
-    <table class="fill" id="class directory">
-        <tr>
-            <th>Course number</th>
-            <th>Course name</th>
-            <th>Rating</th>
-        </tr>
-        <tr>
-            <td>{{=my_class.course_number}}</td>
-            <td>{{=my_class.course_name</td>
-            <td>{{=my_class.overall_rate}}</td>
-        </tr>
-    </table>
-    </div>     
-    <button class= "quarter right" href="{{=URL('default','add_class')}}">Don't see a class? click here</button>
+            <table class="fill" id="class directory">
+                                    <tr>
+                                        <th>Course number</th>
+                                        <th>Course name</th>
+                                        <th>Rating</th>
+                                    </tr>
+                                    <!-- Add classes
+                                    -->
+                               </table>
+                            {{pass}}
+                        </div>
 
 </div>
