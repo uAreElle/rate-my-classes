@@ -38,31 +38,51 @@
             classname=class_name))}}"><i class="fa fa-plus"></i> Add a Review</a>
         </div>
 
-        <br/>
+        
 
+        
+        
+        
         {{for review in reviews:}}
-            <div class="review container">
-                <div class="reviewcol quarter container compressible">
-                    Rating: {{=review.overall_rate}}<br/>
-                    Difficulty: {{=review.difficulty_rate}}<br/>
-                    Professor: {{=review.teacher}}<br/>
-                    Grade: {{=review.grade}}<br/>
-
+        <div class="review container">
+            <table>    
+            <div class="reviewcol quarter container compressible">          
+                    
+                <tr>   
+                    <th> Rating</th>
+                    <th> Difficulty</th>
+                    <th> Professor </th> 
+                    <th> Grade </th> 
+                    <th> Would recommend</th>      
+                </tr>
+                <tr>
+                    <td> {{=review.overall_rate}} </td>
+                    <td>  {{=review.difficulty_rate}} </td>
+                    <td>  {{=review.teacher}} </td> 
+                    <td>  {{=review.grade}} </td> 
                     {{if review.recommend is True:}}
-                        Would recommend: <i class="fa fa-check" aria-hidden="true"></i><br/>
+                    <td> <i class="fa fa-check" aria-hidden="true"></i> </td>
                     {{else:}}
-                        Would recommend: <i class="fa fa-times" aria-hidden="true"></i><br/>
-                    {{pass}}
-                </div>
-                <div class="reviewcol threequarters container compressible">
+                    <td> <i class="fa fa-times" aria-hidden="true"></i></td>     
+                </tr>
+            </div>
+           
+            {{pass}}
+            
+            <div class="reviewcol threequarters container compressible">
                     {{=review.created_on.day}}/{{=review.created_on.month}}/{{=review.created_on.year}}<br/>
                     {{=review.main_review}}<br/>
                     --- {{=review.first_name}}
-                </div>
             </div>
+                
+            </table>   
+              
+        
+           
             <br/><br/>
         {{pass}}
+        </div>
 
-    </div>
+    
 
-</div>
+

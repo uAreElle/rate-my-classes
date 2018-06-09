@@ -67,12 +67,12 @@ if db(db.school.id>0).count() == 0:
     for i,s in enumerate(SCHOOLS):
         db.school.insert(name = s, school_id=i)
     db.commit()
-# Add test classes
-if db(db.myclass.id>0).count() == 0:
-    CLASSES = ['UCSC 101', 'UCB 102', 'UCM 103']
-    for i,c in enumerate(CLASSES):
-        db.myclass.insert(course_name = c, school_id=i)
-    db.commit()  # classes stored in myclass table
+# # Add test classes
+# if db(db.myclass.id>0).count() == 0:
+#     CLASSES = ['UCSC 101', 'UCB 102', 'UCM 103']
+#     for i,c in enumerate(CLASSES):
+#         db.myclass.insert(course_name = c, school_id=i)
+#     db.commit()  # classes stored in myclass table
 
 
 

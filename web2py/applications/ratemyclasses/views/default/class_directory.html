@@ -1,0 +1,23 @@
+{{extend 'layout.html'}}
+
+{{block head}}
+{{end}}
+
+<div class="main_content">
+
+    <!-- Here goes your main HTML code. -->
+    <h3>CLASS DIRECTORY HTML</h3>
+    <a class ="schoolProfileLink" href="{{=URL('school_profile')}}">{{=schoolname}}</a>
+
+    <h1>Viewing: All courses</h1>
+    
+    <table class="fill" id="class directory">
+        
+        <tr>{{for my_class in my_classes:}}
+            <td>{{=my_class.course_name}}</td>
+        </tr>
+    </table>
+        
+    <button class= "quarter right" href="{{=URL('default','add_class')}}">Don't see a class? click here</button>
+
+</div>
