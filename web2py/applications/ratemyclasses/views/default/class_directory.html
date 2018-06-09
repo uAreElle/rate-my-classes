@@ -10,14 +10,21 @@
     <a class ="schoolProfileLink" href="{{=URL('school_profile')}}">{{=schoolname}}</a>
 
     <h1>Viewing: All courses</h1>
-    
+    <div class="class table">
+    {{for my_class in my_classes:}}
     <table class="fill" id="class directory">
-        
-        <tr>{{for my_class in my_classes:}}
-            <td>{{=my_class.course_name}}</td>
+        <tr>
+            <th>Course number</th>
+            <th>Course name</th>
+            <th>Rating</th>
+        </tr>
+        <tr>
+            <td>{{=my_class.course_number}}</td>
+            <td>{{=my_class.course_name</td>
+            <td>{{=my_class.overall_rate}}</td>
         </tr>
     </table>
-        
+    </div>     
     <button class= "quarter right" href="{{=URL('default','add_class')}}">Don't see a class? click here</button>
 
 </div>

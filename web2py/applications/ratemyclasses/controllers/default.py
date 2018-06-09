@@ -164,19 +164,20 @@ def add_review():
         response.flash = 'form has errors'
     return dict(form=form)
 
-# def class_directory():
-#     r=request.vars.schoolname  #retrieve from school_profile html passing
+def class_directory():
+    r=request.vars.schoolname  #retrieve from school_profile html passing
     
-#     if r is not None:
-#         q = db((db.school.name == r)).select().first()
+    if r is not None:
+        q = db((db.school.name == r)).select().first()
     
-#     if q is not None:
-#             c = db((db.myclass.school_id == q.school_id) and (db.myclass.id == db.reviews.).select()
-#             return dict(school_name=q.name, school_id=q.school_id, my_classes=c)
-#         else:
-#             return dict(school_name=q.name, school_id=q.school_id, my_classes="")
-#     else:
-#         return dict(school_name="", school_id=-1, my_classes="")
+    if q is not None:
+        if myclass is not None:
+            c = db((db.myclass.school_id == q.school_id) and (db.myclass.id == db.reviews.class_id)).select()
+            return dict(school_name=q.name, school_id=q.school_id, my_classes=c)
+        else:
+            return dict(school_name=q.name, school_id=q.school_id, my_classes="")
+    else:
+        return dict(school_name="", school_id=-1, my_classes="")
    
     
 
