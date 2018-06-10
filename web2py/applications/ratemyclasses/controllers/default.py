@@ -76,8 +76,8 @@ def school_profile():
 
     toprated = []
     topmyclasses=[]
-    easy_a = ''
-    gpakillers = ''
+    easy_a = []
+    gpakillers = []
     schoolname = ''
     schoolid = ''
 
@@ -90,15 +90,16 @@ def school_profile():
     # Store all the classes associated with the school id
     if q is not None:
         schoolname = q.name
-        schoolid = q.id
+        schoolid = q.school_id
 
         # code for toprated -------------------------------------
-        myclasses = db(db.myclass.school_id == q.id).select()
         review_sum = db.reviews.overall_rate.sum()
         review_count = db.reviews.overall_rate.count()
+        school_classes = db((db.myclass.school_id == q.school_id)).select(db.myclass.id)
 
-        rows = db(db.myclass.id.belongs(myclasses)).select(db.reviews.class_id,
-                                                           review_sum, review_count, groupby=db.reviews.class_id)
+        rows = db(db.reviews.class_id.belongs(school_classes)).select(db.reviews.class_id, review_sum, review_count,
+                                                                      groupby=db.reviews.class_id,
+                                                                      orderby=db.reviews.class_id)
 
         for r in rows:
             avgrate = r._extra[review_sum] / r._extra[review_count]
@@ -108,18 +109,24 @@ def school_profile():
                 toprated.append(avgrate)
 
         # code for easy_as -------------------------------------
-        rows = db((db.reviews.grade.belongs('A+', 'A', 'A-'))).select(db.reviews.id,
+        rows = db((db.reviews.grade.belongs('A+', 'A', 'A-'))).select(db.reviews.class_id,
                                                                       orderby=db.reviews.class_id,
                                                                       groupby=db.reviews.class_id)
-        if db.myclass is not None:
-            easy_a = db(db.myclass.id.belongs(rows)).select()
+        # if db.myclass is not None:
+        #     easy_a = db(db.myclass.id.belongs(rows)).select()
+        for r in rows:
+            c = db((db.myclass.id == r.class_id)).select().first()
+            if c.school_id == q.school_id:
+                easy_a.append(c)
 
         # code for gpakillers -------------------------------------
-        rows = db((db.reviews.grade.belongs('D+', 'D', 'D-', 'F'))).select(db.reviews.id,
-                                                                           orderby=db.reviews.class_id,
-                                                                           groupby=db.reviews.class_id)
-        if db.myclass is not None:
-            gpakillers = db(db.myclass.id.belongs(rows)).select()
+        rows = db((db.reviews.grade.belongs('D+', 'D', 'D-', 'F'))).select(db.reviews.class_id,
+                                                                      orderby=db.reviews.class_id,
+                                                                      groupby=db.reviews.class_id)
+        for r in rows:
+            c = db((db.myclass.id == r.class_id)).select().first()
+            if c.school_id == q.school_id:
+                gpakillers.append(c)
 
     return dict(
         school_name=schoolname,
