@@ -17,9 +17,6 @@ def index():
     if you need a simple wiki simply replace the two lines below with:
     return auth.wiki()
     """
-    if auth.is_logged_in():
-        if auth.user.school is not None:
-            redirect(URL('default', 'school_profile'))
     return dict(message=T('Welcome to web2py!'))
 
 
@@ -39,6 +36,7 @@ def user():
     to decorate functions that need access control
     also notice there is http://..../[app]/appadmin/manage/auth to allow administrator to manage users
     """
+    auth.settings.login_next = URL('default', 'school_profile')
     return dict(form=auth())
 
 
