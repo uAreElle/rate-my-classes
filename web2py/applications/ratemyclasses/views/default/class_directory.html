@@ -5,32 +5,36 @@
 
 <div class="main_content">
 
-    <!-- Here goes your main HTML code. -->
-    <h3>CLASS DIRECTORY</h3>
-    <!-- Redirects to School Profile -->
-    <a class ="schoolProfileLink" href="{{=URL('school_profile', vars=dict(schoolsearch=school_name))}}">
-        {{=school_name}}</a>
+    <div class="classdirectory compressible">
 
-    <h3>Viewing: All Courses</h3>
-    <a class="btn blue pull-right" href="{{=URL('default','add_class')}}">Don't see a class? Click here.</a>
-    <div class="class table">
-        <table class="fill" id="class directory">
-            <tr>
-                <th>Course Number</th>
-                <th>Course Name</th>
-                <th>Overall Rating</th>
-            </tr>
-            <!-- List all classes -->
-            {{if my_classes is not None:}}
-                {{for my_class in my_classes:}}
-                    <tr>
-                        <td>{{=my_class.department}} {{=my_class.course_num}}</td>
-                        <td>{{=my_class.course_name}}</td>
-                        <td></td><!-- Add rating -->
-                    </tr>
+        <!-- Here goes your main HTML code. -->
+        <h3>CLASS DIRECTORY</h3>
+        <!-- Redirects to School Profile -->
+        <a class ="schoolProfileLink" href="{{=URL('school_profile', vars=dict(schoolsearch=school_name))}}">
+            {{=school_name}}</a>
+
+        <h3>Viewing: All Courses</h3>
+        <a class="btn blue pull-right" href="{{=URL('default','add_class')}}">Don't see a class? Click here.</a>
+        <div class="class table">
+            <table class="fill" id="class directory">
+                <tr>
+                    <th>Course Number</th>
+                    <th>Course Name</th>
+                    <th>Overall Rating</th>
+                </tr>
+                <!-- List all classes -->
+                {{if my_classes is not None:}}
+                    {{for my_class in my_classes:}}
+                        <tr>
+                            <td>{{=my_class.department}} {{=my_class.course_num}}</td>
+                            <td>{{=my_class.course_name}}</td>
+                            <td></td><!-- Add rating -->
+                        </tr>
+                    {{pass}}
                 {{pass}}
-            {{pass}}
-        </table>
+            </table>
+        </div>
+
     </div>
 
 </div>
