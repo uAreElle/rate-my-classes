@@ -5,6 +5,21 @@ https://codepen.io/huange/pen/rbqsD
 {{extend 'layout.html'}}
 
 {{block head}}
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  $( function() {
+    var availableTags = [       // Currently hard-coded values, would like to draw from db eventually
+        "University of CA Berkeley",
+        "University of CA Merced",
+        "University of CA Santa Cruz"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );
+ </script>
 {{end}}
 
 <div class="main_content">
@@ -13,10 +28,9 @@ https://codepen.io/huange/pen/rbqsD
 
     <h1>Find classes at your school.</h1>
 
-    <div class="schoolSearchBar">
-
+    <div class="schoolSearchBar ui-widget">
         <form class="schoolSearchForm" action="{{=URL('default', 'school_profile')}}">
-            <input type="text" placeholder="Type in a school..." name="schoolsearch">
+            <input type="text" placeholder="Type in a school..." name="schoolsearch" id="tags">
             <button type="submit">
                 <i class="fa fa-search"></i>
             </button>
