@@ -24,22 +24,22 @@
 
                 <h4><u>Top Rated Courses</u></h4>
                 
-                {{for my_class in my_classes:}}
+                {{for toprate in toprated:}}
 
-                <div class="my_class">
-                  
-                    <tr>
-                        <td>
-                            <a class="classProfileLink" href="{{=URL('class_profile', vars=dict(classid=my_class.id,
-                            schoolname=school_name))}}">{{=my_class.department}} {{=my_class.course_num}}</a>
-                        </td>
-                        <td> 
-                            {{=my_class.course_name}}
-                        </td>
-                    </tr>
-                   
-                   
-                </div>
+                    <div class="toprated">
+
+                        <tr>
+                            <td>
+                                <a class="classProfileLink" href="{{=URL('class_profile',
+                                vars=dict(classid=toprate.id, schoolname=school_name))}}">
+                                {{=toprate.department}} {{=toprate.course_num}}</a>
+                            </td>
+                            <td>
+                                {{=toprate.course_name}}
+                            </td>
+                        </tr>
+
+                    </div>
 
                 {{pass}}
 
@@ -49,18 +49,18 @@
                 <div class="half compressible easy classes">
                     <h4><u>Easy A's</u> <i class="fa fa-thumbs-up" aria-hidden="true"></i></h4>
 
-                    {{for my_class in my_classes:}}
+                    {{for easy_a in easy_as:}}
 
-                        <div class="my_class">
+                        <div class="easy_as">
 
                             <tr>
                                 <td>
                                     <a class="classProfileLink" href="{{=URL('class_profile',
-                                    vars=dict(classid=my_class.id, schoolname=school_name))}}">
-                                    {{=my_class.department}} {{=my_class.course_num}}</a>
+                                    vars=dict(classid=easy_a.id, schoolname=school_name))}}">
+                                    {{=easy_a.department}} {{=easy_a.course_num}}</a>
                                 </td>
                                 <td>
-                                    {{=my_class.course_name}}
+                                    {{=easy_a.course_name}}
                                 </td>
                             </tr>
 
@@ -74,18 +74,18 @@
                 <div class="half compressible hard classes">
                     <h4><u>GPA Killers</u> <i class="fa fa-thumbs-down" aria-hidden="true"></i></h4>
 
-                    {{for my_class in my_classes:}}
+                    {{for gpakiller in gpakillers:}}
 
-                        <div class="my_class">
+                        <div class="gpakillers">
 
                             <tr>
                                 <td>
                                     <a class="classProfileLink" href="{{=URL('class_profile',
-                                    vars=dict(classid=my_class.id, schoolname=school_name))}}">
-                                    {{=my_class.department}} {{=my_class.course_num}}</a>
+                                    vars=dict(classid=gpakiller.id, schoolname=school_name))}}">
+                                    {{=gpakiller.department}} {{=gpakiller.course_num}}</a>
                                 </td>
                                 <td>
-                                    {{=my_class.course_name}}
+                                    {{=gpakiller.course_name}}
                                 </td>
                             </tr>
 
