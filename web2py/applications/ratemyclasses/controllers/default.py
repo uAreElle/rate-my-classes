@@ -73,23 +73,47 @@ def school_search():
 
 def school_profile():
     # Displays the school profile.
+
+    toprated = ''
+    easy_a = ''
+    gpakillers = ''
+    schoolname = ''
+    schoolid = ''
+
     r = request.vars.schoolsearch                   # Retrieve search bar input
     if r is not None:
         q = db((db.school.name == r)).select().first()  # Match search input to school in db
     else:
         q = db((db.school.name == auth.user.school)).select().first()
 
-
     # Store all the classes associated with the school id
     if q is not None:
+        schoolname = q.name
+        schoolid = q.id
+
+        # code for toprated
+
+        # code for easy_as
+        rows = db((db.reviews.grade.belongs('A+', 'A', 'A-'))).select(db.reviews.id,
+                                                                      orderby=db.reviews.class_id,
+                                                                      groupby=db.reviews.class_id)
         if db.myclass is not None:
-            c = db((db.myclass.school_id == q.school_id)).select()
-            d = db((db.myclass.class_id == db.reviews.id)).select()
-            return dict(school_name=q.name, school_id=q.school_id, my_classes=c)
-        else:
-            return dict(school_name=q.name, school_id=q.school_id, my_classes="")
-    else:
-        return dict(school_name="", school_id=-1, my_classes="")
+            easy_a = db(db.myclass.id.belongs(rows)).select()
+
+        # code for gpakillers
+        rows = db((db.reviews.grade.belongs('D+', 'D', 'D-', 'F'))).select(db.reviews.id,
+                                                                           orderby=db.reviews.class_id,
+                                                                           groupby=db.reviews.class_id)
+        if db.myclass is not None:
+            gpakillers = db(db.myclass.id.belongs(rows)).select()
+
+    return dict(
+        school_name=schoolname,
+        school_id=schoolid,
+        toprated=easy_a,
+        easy_as=easy_a,
+        gpakillers=gpakillers
+    )
 
 
 def class_profile():
@@ -99,7 +123,7 @@ def class_profile():
     q = db((db.myclass.id == request.vars.classid)).select().first()
 
     # Get all reviews associated with class
-    rows = db((db.reviews.class_id == request.vars.classid)).select()
+    rows = db((db.reviews.class_id == request.vars.classid)).select(orderby=~db.reviews.created_on)
 
     reviews = ' '
     overallrating = 0
