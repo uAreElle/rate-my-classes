@@ -241,6 +241,13 @@ form.schoolSearchForm::after {
     margin-right: 90px;
 }
 
+.reviewcol {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
 h5#s_name {
     color: #575554;
 }
@@ -255,5 +262,24 @@ h5#s_name {
 }
 
 .addReviewLink:hover {
+    color: #49c1f4;
+}
+
+/* ================= Used in class_directory.html ================================== */
+
+.classdirectory {
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.schoolProfileLink {
+    font-weight: bold;
+    color: black;
+}
+
+.schoolProfileLink:hover {
     color: #49c1f4;
 }

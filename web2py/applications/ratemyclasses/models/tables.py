@@ -38,7 +38,7 @@ db.define_table('myclass',
                 Field('course_num', label='Course Number'),    #Course number ex. 101
                 Field('course_name', label='Course Name'),   #Full course name ex. Web Applications
                 Field('genEd', default='None', label='General Education Code'),         #General education requirement it satisfies
-                Field('info', label='Course Details'),          #The course details go here(a brief synopsis)
+                Field('info', default='None', label='Course Details'),          #The course details go here(a brief synopsis)
                 #Field('bookmark', 'boolean', default=False), #If the student wants to bookmark it it's true else false
                 # (will uncomment above if we get time to implement this)
                 Field('updated_on', 'datetime', update=datetime.datetime.utcnow(), readable=False, writable=False),
