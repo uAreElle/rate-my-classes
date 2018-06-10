@@ -75,6 +75,7 @@ def school_profile():
     # Displays the school profile.
 
     toprated = []
+    topmyclasses=[]
     easy_a = ''
     gpakillers = ''
     schoolname = ''
@@ -91,31 +92,29 @@ def school_profile():
         schoolname = q.name
         schoolid = q.id
 
-        # code for toprated
+        # code for toprated -------------------------------------
+        myclasses = db(db.myclass.school_id == q.id).select()
         review_sum = db.reviews.overall_rate.sum()
         review_count = db.reviews.overall_rate.count()
 
-        rows = db().select(db.reviews.class_id, review_sum, review_count, groupby=db.reviews.class_id)
+        rows = db(db.myclass.id.belongs(myclasses)).select(db.reviews.class_id,
+                                                           review_sum, review_count, groupby=db.reviews.class_id)
 
         for r in rows:
-            c = db((db.myclass.id == r.reviews.class_id)).select().first()
-            t = dict(
-                id=c.id,
-                department=c.department,
-                course_num=c.course_num,
-                course_name=c.course_name,
-                avgrate=r._extra[review_sum] / r._extra[review_count]
-            )
-            toprated.append(t)
+            avgrate = r._extra[review_sum] / r._extra[review_count]
+            if avgrate >= 4:
+                c = db((db.myclass.id == r.reviews.class_id)).select().first()
+                topmyclasses.append(c)
+                toprated.append(avgrate)
 
-        # code for easy_as
+        # code for easy_as -------------------------------------
         rows = db((db.reviews.grade.belongs('A+', 'A', 'A-'))).select(db.reviews.id,
                                                                       orderby=db.reviews.class_id,
                                                                       groupby=db.reviews.class_id)
         if db.myclass is not None:
             easy_a = db(db.myclass.id.belongs(rows)).select()
 
-        # code for gpakillers
+        # code for gpakillers -------------------------------------
         rows = db((db.reviews.grade.belongs('D+', 'D', 'D-', 'F'))).select(db.reviews.id,
                                                                            orderby=db.reviews.class_id,
                                                                            groupby=db.reviews.class_id)
@@ -125,7 +124,8 @@ def school_profile():
     return dict(
         school_name=schoolname,
         school_id=schoolid,
-        toprated=easy_a,
+        toprated=toprated,
+        topmyclasses=topmyclasses,
         easy_as=easy_a,
         gpakillers=gpakillers
     )

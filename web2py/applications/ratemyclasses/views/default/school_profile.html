@@ -23,26 +23,25 @@
             <div class="twothirds schoolprof-column compressible">
 
                 <h4><u>Top Rated Courses</u></h4>
-                
-                {{for toprate in toprated:}}
+
+                {{for toprate, topmyclass in zip(toprated, topmyclasses):}}
 
                     <div class="toprated">
 
                         <tr>
                             <td>
                                 <a class="classProfileLink" href="{{=URL('class_profile',
-                                vars=dict(classid=toprate.id, schoolname=school_name))}}">
-                                {{=toprate.department}} {{=toprate.course_num}}</a>
+                                vars=dict(classid=topmyclass.id, schoolname=school_name))}}">
+                                {{=topmyclass.department}} {{=topmyclass.course_num}}</a>
                             </td>
                             <td>
-                                {{=toprate.course_name}}
+                                {{=topmyclass.course_name}} ({{=toprate}})
                             </td>
                         </tr>
 
                     </div>
 
                 {{pass}}
-
             </div>
 
             <div class="third schoolprof-column classes compressible">
