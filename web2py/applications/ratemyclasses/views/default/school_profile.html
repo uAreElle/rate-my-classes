@@ -48,14 +48,54 @@
             <div class="third schoolprof-column classes compressible">
                 <div class="half compressible easy classes">
                     <h4><u>Easy A's</u> <i class="fa fa-thumbs-up" aria-hidden="true"></i></h4>
+
+                    {{for my_class in my_classes:}}
+
+                        <div class="my_class">
+
+                            <tr>
+                                <td>
+                                    <a class="classProfileLink" href="{{=URL('class_profile',
+                                    vars=dict(classid=my_class.id, schoolname=school_name))}}">
+                                    {{=my_class.department}} {{=my_class.course_num}}</a>
+                                </td>
+                                <td>
+                                    {{=my_class.course_name}}
+                                </td>
+                            </tr>
+
+                        </div>
+
+                    {{pass}}
                 </div>
 
                 <br/><br/><br/><br/>
 
                 <div class="half compressible hard classes">
                     <h4><u>GPA Killers</u> <i class="fa fa-thumbs-down" aria-hidden="true"></i></h4>
+
+                    {{for my_class in my_classes:}}
+
+                        <div class="my_class">
+
+                            <tr>
+                                <td>
+                                    <a class="classProfileLink" href="{{=URL('class_profile',
+                                    vars=dict(classid=my_class.id, schoolname=school_name))}}">
+                                    {{=my_class.department}} {{=my_class.course_num}}</a>
+                                </td>
+                                <td>
+                                    {{=my_class.course_name}}
+                                </td>
+                            </tr>
+
+                        </div>
+
+                    {{pass}}
                 </div>
             </div>
+
+        <br/><br/><br/><br/>
 
         {{else:}}
             <h3> School not found </h3>
