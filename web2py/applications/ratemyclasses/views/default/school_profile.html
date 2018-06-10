@@ -15,7 +15,7 @@
             <h3>Viewing: {{=school_name}}</h3>
             <a class="btn blue" href="{{=URL('class_directory', vars=dict(schoolname=school_name))}}">View all</a>
             <br/>
-            <a class="addClassLink" href="{{=URL('add_class', vars=dict(schoolid=school_id,
+            <a class="addClassLink" href="{{=URL('default', 'add_class', vars=dict(schoolid=school_id,
             schoolname=school_name))}}">Don't see your class? Click here to add.</a>
 
             <br/><br/>
