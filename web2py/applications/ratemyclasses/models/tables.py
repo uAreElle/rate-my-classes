@@ -43,7 +43,7 @@ db.define_table('myclass',
                 # (will uncomment above if we get time to implement this)
                 Field('updated_on', 'datetime', update=datetime.datetime.utcnow(), readable=False, writable=False),
                 Field('school_id', readable=False, writable=False),
-                Field('class_id', default=make_random_id(), readable=False, writable=False),
+                Field('class_id', default=make_random_id(), readable=False, writable=False)
 )
 
 db.myclass.id.writable = db.myclass.id.readable = False

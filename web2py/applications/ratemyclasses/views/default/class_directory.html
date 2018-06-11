@@ -25,11 +25,15 @@
                 </tr>
                 <!-- List all classes -->
                 {{if my_classes is not None:}}
-                    {{for rating, my_classes in zip(rating, my_classes):}}
+                    {{for my_rating, my_class in zip(my_ratings, my_classes):}}
                         <tr>
-                            <td>{{=my_classes.department}} {{=my_classes.course_num}}</td>
-                            <td>{{=my_classes.course_name}}</td>
-                            <td>{{=rating.reviews.overall_rate}}</td>
+                            <td>
+                                <a class="classProfileLink" href="{{=URL('class_profile',
+                                vars=dict(classid=my_class.id, schoolname=school_name))}}">
+                                {{=my_class.department}} {{=my_class.course_num}}</a>
+                            </td>
+                            <td>{{=my_class.course_name}}</td>
+                            <td>{{=my_rating}}</td>
                         </tr>
                     {{pass}}
                 {{pass}}
