@@ -245,6 +245,13 @@ form.schoolSearchForm::after {
     margin-right: 30px;
 }
 
+#reviews-table {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
 h5#s_name {
     color: #575554;
 }
@@ -289,3 +296,4 @@ h5#s_name {
 .classProfileLink:hover {
     color: #49c1f4;
 }
+

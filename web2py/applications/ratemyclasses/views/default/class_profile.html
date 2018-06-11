@@ -38,10 +38,11 @@
             classname=class_name))}}"><i class="fa fa-plus"></i> Add a Review</a>
         </div>
         <div id="reviews-box" style="
-border-radius: 25px;
+border-radius: 20px;
 background-color: white;
 box-shadow: inset 0px 0px 10px 0px black;">
         <table id="reviews-table">
+
             <tr>
                 <th></th>
                 <th></th>
@@ -61,9 +62,9 @@ box-shadow: inset 0px 0px 10px 0px black;">
                             Grade: {{=review.grade}}<br/>
 
                         {{if review.recommend is True:}}
-                            Would recommend: <i class="fa fa-check" aria-hidden="true"></i><br/>
+                            Would recommend: <i class="fa fa-check" aria-hidden="true"></i>
                         {{else:}}
-                            Would recommend: <i class="fa fa-times" aria-hidden="true"></i><br/>
+                            Would recommend: <i class="fa fa-times" aria-hidden="true"></i>
                         {{pass}}
                         </div>
                     </td>
@@ -76,6 +77,10 @@ box-shadow: inset 0px 0px 10px 0px black;">
                     </td>
                 </tr>
             {{pass}}
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
 
         </table>
     </div>
