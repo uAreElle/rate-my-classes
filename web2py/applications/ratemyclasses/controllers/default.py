@@ -101,6 +101,7 @@ def school_profile():
 
         for r in rows:
             avgrate = r._extra[review_sum] / r._extra[review_count]
+            avgrate = round(avgrate, 1)
             if avgrate >= 4:
                 c = db((db.myclass.id == r.reviews.class_id)).select().first()
                 topmyclasses.append(c)
@@ -110,8 +111,7 @@ def school_profile():
         rows = db((db.reviews.grade.belongs('A+', 'A', 'A-'))).select(db.reviews.class_id,
                                                                       orderby=db.reviews.class_id,
                                                                       groupby=db.reviews.class_id)
-        # if db.myclass is not None:
-        #     easy_a = db(db.myclass.id.belongs(rows)).select()
+
         for r in rows:
             c = db((db.myclass.id == r.class_id)).select().first()
             if c.school_id == q.school_id:
@@ -146,7 +146,7 @@ def class_profile():
     rows = db((db.reviews.class_id == request.vars.classid)).select(orderby=~db.reviews.created_on)
 
     reviews = ' '
-    overallrating = 0
+    overallrating = 0.0
     recommendclass = 0.0
     counter = 0
 
@@ -180,6 +180,51 @@ def class_profile():
         recommendclass=recommendclass
     )
 
+
+def class_directory():
+    r = request.vars.schoolname  # retrieve from school_profile html passing
+    q = db((db.school.name == r)).select().first()
+
+    overall_classes = []
+    overall_ratings = []
+
+    if q is not None:
+        if db.myclass is not None:
+
+            rows = db((db.myclass.school_id == q.school_id)).select()
+
+            for row in rows:
+                review_rows = db((db.reviews.class_id == row.id)).select()
+                tempoverallrate = 0.0
+                ctr = 0
+
+                if review_rows is not None:
+                    for review_row in review_rows:
+                        ctr = ctr + 1
+                        if review_row.overall_rate is not None:
+                            tempoverallrate = tempoverallrate + review_row.overall_rate
+
+                if ctr is not 0:
+                    avgrate = tempoverallrate / ctr  # computes average rating
+                else:
+                    avgrate = 0.0
+
+                avgrate = round(avgrate, 1)
+                overall_classes.append(row)
+                overall_ratings.append(avgrate)
+
+            return dict(school_name=q.name,
+                        school_id=q.school_id,
+                        my_classes=overall_classes,
+                        my_ratings=overall_ratings)
+
+        else:
+            return dict(school_name=q.name,
+                        school_id=q.school_id,
+                        my_classes="",
+                        my_ratings="")
+
+
 @auth.requires_login()
 def add_school():
     form = SQLFORM(db.school)
@@ -188,6 +233,7 @@ def add_school():
     elif form.errors:
         response.flash = 'form has errors'
     return dict(form=form)
+
 
 @auth.requires_login()
 def add_class():
@@ -198,6 +244,7 @@ def add_class():
     elif form.errors:
         response.flash = 'form has errors'
     return dict(form=form)
+
 
 @auth.requires_login()
 def add_review():
@@ -210,23 +257,3 @@ def add_review():
     elif form.errors:
         response.flash = 'form has errors'
     return dict(form=form)
-
-
-def class_directory():
-    r = request.vars.schoolname  #retrieve from school_profile html passing
-    q = db((db.school.name == r)).select().first()
-    
-    if q is not None:
-        if db.myclass is not None:
-            c = db((db.myclass.school_id == q.school_id)).select()
-            d = db((db.reviews.class_id == db.myclass.id)).select()
-            return dict(school_name=q.name, school_id=q.school_id, my_classes=c,rating=d)
-        else:
-            return dict(school_name=q.name, school_id=q.school_id, my_classes="",rating="")
-   
-    
-
-
-    
-
-
