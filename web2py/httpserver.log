@@ -3776,3 +3776,17 @@
 127.0.0.1, 2018-06-11 16:14:36, GET, /ratemyclasses/default/index, HTTP/1.1, 200, 0.084000
 127.0.0.1, 2018-06-11 16:14:36, GET, /ratemyclasses/static/css/rate-my-class.css, HTTP/1.1, 304, 0.000521
 127.0.0.1, 2018-06-11 16:14:36, GET, /favicon.ico, HTTP/1.1, 400, 0.000267
+127.0.0.1, 2018-06-11 16:26:27, GET, /ratemyclasses/default/index, HTTP/1.1, 200, 0.024767
+127.0.0.1, 2018-06-11 16:26:27, GET, /favicon.ico, HTTP/1.1, 400, 0.000222
+127.0.0.1, 2018-06-11 16:26:34, GET, /ratemyclasses/default/school_profile, HTTP/1.1, 200, 0.027169
+127.0.0.1, 2018-06-11 16:26:34, GET, /favicon.ico, HTTP/1.1, 400, 0.000198
+127.0.0.1, 2018-06-11 16:26:36, GET, /ratemyclasses/default/class_directory, HTTP/1.1, 200, 0.028344
+127.0.0.1, 2018-06-11 16:26:36, GET, /favicon.ico, HTTP/1.1, 400, 0.000222
+127.0.0.1, 2018-06-11 16:26:38, GET, /ratemyclasses/default/school_profile, HTTP/1.1, 200, 0.033156
+127.0.0.1, 2018-06-11 16:26:38, GET, /favicon.ico, HTTP/1.1, 400, 0.000218
+127.0.0.1, 2018-06-11 16:26:39, GET, /ratemyclasses/default/class_profile, HTTP/1.1, 200, 0.023399
+127.0.0.1, 2018-06-11 16:26:39, GET, /favicon.ico, HTTP/1.1, 400, 0.000291
+127.0.0.1, 2018-06-11 16:26:41, GET, /ratemyclasses/default/school_profile, HTTP/1.1, 200, 0.025587
+127.0.0.1, 2018-06-11 16:26:41, GET, /favicon.ico, HTTP/1.1, 400, 0.000208
+127.0.0.1, 2018-06-11 16:27:06, GET, /ratemyclasses/default/class_profile, HTTP/1.1, 200, 0.023534
+127.0.0.1, 2018-06-11 16:27:06, GET, /favicon.ico, HTTP/1.1, 400, 0.000214
