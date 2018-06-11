@@ -159,6 +159,10 @@ Cloned from: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
 }
 
 /* ================= Used in index.html ================================== */
+.greeting {
+    color: white;
+    text-align: center;
+}
 
 .schoolSearchBar {
     margin: auto;
