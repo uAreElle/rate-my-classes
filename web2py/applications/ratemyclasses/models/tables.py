@@ -73,13 +73,17 @@ db.reviews.id.writable = db.reviews.id.readable = False
 db.reviews.overall_rate.requires = [IS_NOT_EMPTY(),
                                     IS_FLOAT_IN_RANGE(1.0, 5.0, dot=".",
                                                       error_message='Please enter a value between 1.0 and 5.0!')]
+
 db.reviews.difficulty_rate.requires = [IS_NOT_EMPTY(),
                                        IS_FLOAT_IN_RANGE(1.0, 5.0, dot=".",
                                                          error_message='Please enter a value between 1.0 and 5.0!')]
-db.reviews.grade.requires = [IS_NOT_EMPTY(),
-                             IS_IN_SET(['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-',
-                                        'D+', 'D', 'D-', 'F'], zero=T('choose one'),
-                                       error_message='Please choose A, B, C, D (+ or -) or F!')]
+
+db.reviews.grade.requires = IS_NOT_EMPTY()
+
+db.reviews.grade.requires = IS_IN_SET(['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-',
+                                        'D+', 'D', 'D-', 'F'], zero=T('Choose one'),
+                                       error_message='Please choose A, B, C, D (+ or -) or F!')
+
 db.reviews.main_review.requires = IS_NOT_EMPTY()
 
 
