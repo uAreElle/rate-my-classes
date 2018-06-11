@@ -32,7 +32,6 @@ db.define_table('school',
 db.school.name.requires = [IS_NOT_EMPTY(),
                            IS_NOT_IN_DB(db, 'school.name')]
 
-
 db.define_table('myclass',
                 Field('department'),    #Can be full department name(i.e. Computer Science) or shorthand (i.e CMPS)
                 Field('course_num', label='Course Number'),    #Course number ex. 101

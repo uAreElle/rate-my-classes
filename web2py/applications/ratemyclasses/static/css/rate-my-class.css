@@ -212,6 +212,7 @@ form.schoolSearchForm::after {
 
 /* ================= Used in school_profile.html ================================== */
 
+
 .addClassLink {
     font-weight: bold;
     color:#49c1f4;
@@ -222,14 +223,6 @@ form.schoolSearchForm::after {
     color: #49c1f4;
 }
 
-.classProfileLink {
-    font-weight: bold;
-    color: black;
-}
-
-.classProfileLink:hover {
-    color: #49c1f4;
-}
 
 /* ================= Used in class_profile.html ================================== */
 
@@ -281,5 +274,14 @@ h5#s_name {
 }
 
 .schoolProfileLink:hover {
+    color: #49c1f4;
+}
+
+.classProfileLink {
+    font-weight: bold;
+    color: black;
+}
+
+.classProfileLink:hover {
     color: #49c1f4;
 }
