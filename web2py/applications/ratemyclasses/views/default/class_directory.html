@@ -25,11 +25,11 @@
                 </tr>
                 <!-- List all classes -->
                 {{if my_classes is not None:}}
-                    {{for my_class in my_classes:}}
+                    {{for rating, my_classes in zip(rating, my_classes):}}
                         <tr>
-                            <td>{{=my_class.department}} {{=my_class.course_num}}</td>
-                            <td>{{=my_class.course_name}}</td>
-                            <td></td><!-- Add rating -->
+                            <td>{{=my_classes.department}} {{=my_classes.course_num}}</td>
+                            <td>{{=my_classes.course_name}}</td>
+                            <td>{{=rating.reviews.overall_rate}}</td>
                         </tr>
                     {{pass}}
                 {{pass}}

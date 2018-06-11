@@ -219,9 +219,10 @@ def class_directory():
     if q is not None:
         if db.myclass is not None:
             c = db((db.myclass.school_id == q.school_id)).select()
-            return dict(school_name=q.name, school_id=q.school_id, my_classes=c)
+            d = db((db.reviews.class_id == db.myclass.id)).select()
+            return dict(school_name=q.name, school_id=q.school_id, my_classes=c,rating=d)
         else:
-            return dict(school_name=q.name, school_id=q.school_id, my_classes="")
+            return dict(school_name=q.name, school_id=q.school_id, my_classes="",rating="")
    
     
 
