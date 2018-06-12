@@ -15,72 +15,65 @@
             {{=school_name}}
         </h5>
 
-        <br/>
-        <div id="infobox" style="border-radius: 25px;background-color: #fce5ca;width: 100%;border: 10px;padding: 25px;margin: 25px;margin-left: 0">
-        <h6>
-            Satisfies general education: <div class="grey-text">{{=general_ed}}</div><br/>
-            General information about this class:<br/>
-            <div class="grey-text">{{=class_info}}</div>
-        </h6>
+        <div id="infobox">
+            <h6>
+                Satisfies general education: <div class="grey-text">{{=general_ed}}</div><br/>
+                General information about this class:<br/>
+                <div class="grey-text">{{=class_info}}</div>
+            </h6>
 
-        <br/>
+            <br/>
 
-        <div class="overall_stats">
-            <b>
-                Overall Rating: {{=overallrating}}<br/>
-                {{=recommendclass}}% recommend this class<br/><br/>
-            </b>
+            <div class="overall_stats">
+                <b>
+                    Overall Rating: {{=overallrating}}<br/>
+                    {{=recommendclass}}% recommend this class<br/><br/>
+                </b>
+            </div>
         </div>
-    </div>
 
         <div class="my_review">
             <a class="btn blue rounded" href="{{=URL('add_review', vars=dict(classid=class_id,
             classname=class_name))}}"><i class="fa fa-plus"></i> Add a Review</a>
         </div>
-        <div id="reviews-box" style="border-radius: 20px;background-color: #fce5ca;box-shadow: inset 0px 0px 10px 0px black;">
-        <table id="reviews-table">
 
-            <tr>
-                <th></th>
-                <th></th>
-            </tr>
-            {{for review in reviews:}}
-                <tr>
-                    <td>
-                        <div class="reviewcol compressible">
+        <div id="reviews-box">
+            <table id="reviews-table">
 
-                            Rating: {{=review.overall_rate}}<br/>
-                            Difficulty: {{=review.difficulty_rate}}<br/>
+                {{for review in reviews:}}
+                    <tr>
+                        <td>
+                            <div class="reviewcol compressible">
 
-                        {{if review.teacher!='None' and review.teacher!='':}}
-                            Professor: {{=review.teacher}}<br/>
-                        {{pass}}
+                                Rating: {{=review.overall_rate}}<br/>
+                                Difficulty: {{=review.difficulty_rate}}<br/>
 
-                            Grade: {{=review.grade}}<br/>
+                                {{if review.teacher!='None' and review.teacher!='':}}
+                                    Professor: {{=review.teacher}}<br/>
+                                {{pass}}
 
-                        {{if review.recommend is True:}}
-                            Would recommend: <i class="fa fa-check" aria-hidden="true"></i>
-                        {{else:}}
-                            Would recommend: <i class="fa fa-times" aria-hidden="true"></i>
-                        {{pass}}
-                        </div>
-                    </td>
-                    <td>
-                        <div class="reviewcol compressible">
-                        {{=review.created_on.month}}/{{=review.created_on.day}}/{{=review.created_on.year}}<br/>
-                        {{=review.main_review}}<br/>
-                            --- {{=review.first_name}}
-                        </div>
-                    </td>
-                </tr>
-            {{pass}}
-            <tr>
-                <th></th>
-                <th></th>
-            </tr>
+                                    Grade: {{=review.grade}}<br/>
 
-        </table>
-    </div>
+                                {{if review.recommend is True:}}
+                                    Would recommend: <i class="fa fa-check" aria-hidden="true"></i>
+                                {{else:}}
+                                    Would recommend: <i class="fa fa-times" aria-hidden="true"></i>
+                                {{pass}}
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class="reviewcol compressible">
+                            {{=review.created_on.month}}/{{=review.created_on.day}}/{{=review.created_on.year}}<br/>
+                            {{=review.main_review}}<br/>
+                                --- {{=review.first_name}}
+                            </div>
+                        </td>
+                    </tr>
+                {{pass}}
+
+            </table>
+        </div>
     </div>
 
 </div>
