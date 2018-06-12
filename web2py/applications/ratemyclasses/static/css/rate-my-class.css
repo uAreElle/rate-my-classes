@@ -252,6 +252,24 @@ form.schoolSearchForm::after {
     margin-right: 30px;
 }
 
+#infobox {
+    text-align: center;
+    border-radius: 25px;
+    background-color: #fce5ca;
+    border: 10px;
+    padding: 25px;
+    margin: 50px;
+    /*margin-left: 0;*/
+}
+
+#reviews-box {
+    padding: 50px;
+    margin: 50px;
+    border-radius: 25px;
+    background-color: #fce5ca;
+    box-shadow: inset 0px 0px 10px 0px black;
+}
+
 h5#s_name {
     color: #575554;
 }
