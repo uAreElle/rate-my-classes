@@ -9,12 +9,11 @@
 
         <!-- Here goes your main HTML code. -->
 
-        <h3 style="margin-left: 10px">SCHOOL PROFILE</h3>
 
         {{if school_name is not None:}}
-            <h3 style="margin-left:10px">Viewing: {{=school_name}}</h3>
+            <h3 style="text-align: center">{{=school_name}}</h3>
             <br/>
-            <a class="btn blue" style="margin-left:10px" href="{{=URL('class_directory', vars=dict(schoolname=school_name))}}">View all</a>
+            <a class="btn blue" style="..." href="{{=URL('class_directory', vars=dict(schoolname=school_name))}}">View all</a>
             <!-- commenting out since it's in class directory now
             <a class="addClassLink" href="[start curly braces]=URL('default', 'add_class', vars=dict(schoolid=school_id,
             schoolname=school_name))[end curly braces]">Don't see your class? Click here to add.</a>
@@ -23,7 +22,7 @@
             <br/><br/><br/>
 
             <div class="twothirds schoolprof-column compressible">
-                <div id="toprating" style="border-radius: 15px;background-color:#fce5ca;border: 10px;padding: 10px;margin: 10px;">
+                <div id="toprating" style="border-radius: 15px;background-color:#fce5ca;border: 10px;padding: 15px;margin: 10px;">
                 <h4 style="margin-top:-10px"><u>Top Rated Courses</u></h4>
                 
                 {{for toprate, topmyclass in zip(toprated, topmyclasses):}}
@@ -48,8 +47,8 @@
             </div>
 
             <div class="third schoolprof-column classes compressible">
-                <div class="compressible easy classes" style="border-radius: 15px;background-color:#fce5ca;border: 10px;padding: 10px;margin: 10px;">
-                    <h4 style="margin-top:-10px"><u>Easy A's</u> <i class="fa fa-thumbs-up" aria-hidden="true"></i></h4>
+                <div class="compressible easy classes" style="border-radius: 15px;background-color:#fce5ca;border: 10px;padding: 15px;margin: 10px;">
+                    <h4 style="margin-top:-5px"><u>Easy A's</u> <i class="fa fa-thumbs-up" aria-hidden="true"></i></h4>
 
                     {{for easy_a in easy_as:}}
 
@@ -73,8 +72,8 @@
 
                 <br/><br/><br/><br/>
 
-                <div class="compressible hard classes" style="border-radius: 15px;background-color:#fce5ca;border: 10px;padding: 10px;margin: 10px;">
-                    <h4 style="margin-top:-10px"><u>GPA Killers</u> <i class="fa fa-thumbs-down" aria-hidden="true"></i></h4>
+                <div class="compressible hard classes" style="border-radius: 15px;background-color:#fce5ca;border: 10px;padding: 15px;margin: 10px;">
+                    <h4 style="margin-top:-5px"><u>GPA Killers</u> <i class="fa fa-thumbs-down" aria-hidden="true"></i></h4>
 
                     {{for gpakiller in gpakillers:}}
 
