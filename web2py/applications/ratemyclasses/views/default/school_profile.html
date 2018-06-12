@@ -32,12 +32,12 @@
 
                         <tr>
                             <td>
-                                {{=topmyclass.department}} {{=topmyclass.course_num}}
+                                {{=topmyclass.department}} &nbsp &nbsp &nbsp{{=topmyclass.course_num}} &nbsp &nbsp &nbsp 
                             </td>
                             <td>
                                 <a class="classProfileLink" href="{{=URL('class_profile',
                                 vars=dict(classid=topmyclass.id, schoolname=school_name))}}">
-                                {{=topmyclass.course_name}}</a> ({{=toprate}})
+                                {{=topmyclass.course_name}}</a> &nbsp ({{=toprate}})
                             </td>
                         </tr>
 
@@ -57,7 +57,7 @@
 
                             <tr>
                                 <td>
-                                    {{=easy_a.department}} {{=easy_a.course_num}}
+                                    {{=easy_a.department}} &nbsp &nbsp &nbsp  {{=easy_a.course_num}} &nbsp &nbsp &nbsp
                                 </td>
                                 <td>
                                     <a class="classProfileLink" href="{{=URL('class_profile',
@@ -82,7 +82,7 @@
 
                             <tr>
                                 <td>
-                                    {{=gpakiller.department}} {{=gpakiller.course_num}}
+                                    {{=gpakiller.department}} &nbsp &nbsp &nbsp {{=gpakiller.course_num}} &nbsp &nbsp &nbsp
                                 </td>
                                 <td>
                                     <a class="classProfileLink" href="{{=URL('class_profile',
