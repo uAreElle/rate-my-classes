@@ -11,18 +11,18 @@
 
 
         {{if school_name is not None:}}
-            <h3 style="text-align: center">{{=school_name}}</h3>
+            <h2 style="text-align: center">{{=school_name}}</h2>
             <br/>
-            <a class="btn blue" style="..." href="{{=URL('class_directory', vars=dict(schoolname=school_name))}}">View all</a>
+            <div class="twothirds">
+                <a class="btn blue pull-right" style="..." href="{{=URL('class_directory', vars=dict(schoolname=school_name))}}">View All Courses</a>
+            </div>
             <!-- commenting out since it's in class directory now
             <a class="addClassLink" href="[start curly braces]=URL('default', 'add_class', vars=dict(schoolid=school_id,
             schoolname=school_name))[end curly braces]">Don't see your class? Click here to add.</a>
             -->
 
-            <br/><br/><br/>
-
             <div class="twothirds schoolprof-column compressible">
-                <div id="toprating" style="border-radius: 15px;background-color:#fce5ca;border: 10px;padding: 15px;margin: 10px;">
+                <div id="toprating" style="border-radius: 12px;background-color:#fce5ca;border: 10px;padding: 15px;margin: 10px;">
                 <h4 style="margin-top:-10px"><u>Top Rated Courses</u></h4>
                 
                 {{for toprate, topmyclass in zip(toprated, topmyclasses):}}
